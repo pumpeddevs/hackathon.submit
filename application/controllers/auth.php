@@ -9,12 +9,12 @@ class Auth extends FrontController {
 
 	private $api = array(
 			'Facebook' => array(
-					'client_id'     => '817918001602609',
-					'client_secret' => '1837bc1927e9976659eac193086e814f'
+					'client_id'     => FB_CLIENT_ID,
+					'client_secret' => FB_CLIENT_SECRET
 			 ),
 			'Google' => array(
-				'client_id'     => '1083567373902-ktkflmvll25vfr44t6m5k7hdku0mlpvq.apps.googleusercontent.com',
-				'client_secret' => 'LIT16LPia1gSRxSWkjiliT7d'
+				'client_id'     => GOOGLE_CLIENT_ID,
+				'client_secret' => GOOGLE_CLIENT_SECRET
 			)
 	);
 
