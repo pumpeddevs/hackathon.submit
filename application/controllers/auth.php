@@ -1,9 +1,5 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-<<<<<<< HEAD
-class Auth extends FrontController{
-	public function index() {
-=======
 /**
  * Description of auth
  *
@@ -27,7 +23,6 @@ class Auth extends FrontController {
 	public function index() 
 	{
 		$this->title = "Instruct.me";
->>>>>>> origin/oauth-client
 		$this->render('auth/index');
 	}
 
