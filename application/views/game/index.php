@@ -17,6 +17,12 @@
 		</div>
 	</div>
 	<div class="game-holder pull-right">
-		<div class="alert alert-success" role="alert">Welcome to Instruct.Me. </div>
+		<div id="tip1" class="alert alert-success" role="alert">Welcome to Instruct.Me. </div>
 	</div>
 </div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#tip1').addClass('bounceOutUp');
+	});
+</script>
