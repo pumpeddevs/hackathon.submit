@@ -18,7 +18,7 @@ class ImUser extends CI_Model{
 	}
 
 	public function insertUser($email,$token) {
-		$sql = "INSERT INTO im_user_meta (email, token) "
+		$sql = "INSERT INTO im_user (email, token) "
 				. "VALUES (?, ?)";
 
 		return $this->db->query($sql, array($email, $token));
