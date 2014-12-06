@@ -8,18 +8,18 @@
 /**
  * Description of BaseController
  *
- * @author 
+ * @author
  */
 class BaseController extends CI_Controller {
-    
-    public $layout='layout/mobile';
-    public $title = "Page not found";    
+
+    public $layout='layout/front';
+    public $title = "Page not found";
     public $data = array();
 
 	public function __construct() {
 		parent::__construct();
 		$this->load->library('session');
-		
+
 	}
 
     public function render($view, $param=array()) {
@@ -28,7 +28,7 @@ class BaseController extends CI_Controller {
 				$data['title'] = $this->title;
         $this->load->view($this->layout,$data);
     }
-    
+
     public function renderPartial($view,$param=array()) {
         $this->load->view($view,$param);
     }
@@ -43,7 +43,7 @@ class BaseController extends CI_Controller {
 
 	public function autoRender($view,$param=array()) {
 		if($this->isAjax()) {
-			$this->renderPartial($view,$param);	
+			$this->renderPartial($view,$param);
 		} else {
 			$userAgent = strtolower($_SERVER['HTTP_USER_AGENT']);
 
@@ -74,4 +74,14 @@ class BaseController extends CI_Controller {
 			$this->render('errorpage/pagenotfound');
 		}
 	}
-} 
+
+	/**
+	* var_dump helper
+	*/
+	public function dd($val)
+	{
+		echo "<pre>";
+		var_dump($val);
+		die;
+	}
+}
