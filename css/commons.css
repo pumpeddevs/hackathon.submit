@@ -40,4 +40,4 @@ textarea, input, button { font-family: "Helvetica", Arial, sans-serif; font-weig
 
 /* Game Holder
 *********************/
-.game-holder { width:65%; height:100%; background:#DDD;z-index: 1; }
+.game-holder { width:65%; height:100%; background:#DDD;z-index: 1; padding:90px; }

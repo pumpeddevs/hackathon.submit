@@ -17,6 +17,6 @@
 		</div>
 	</div>
 	<div class="game-holder pull-right">
-
+		<img alt="im-logo" src="<?php echo base_url(); ?>images/im-logo.png" />
 	</div>
 </duv>
