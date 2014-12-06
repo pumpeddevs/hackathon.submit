@@ -25,6 +25,7 @@
 	<script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/addon/lint/javascript-lint.js'); ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/javascript.js'); ?>"></script>
 	<!-- <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script> -->
+
 </head>
 <body>
 	<?php echo $this->load->view($view, $param); ?>
