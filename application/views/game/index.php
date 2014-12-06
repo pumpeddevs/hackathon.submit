@@ -6,7 +6,7 @@
 		</div>
 		<div class="title"><p>Text Editor</p></div>
 		<div class="text-editor-holder">
-			<textarea class="text-editor prettyprint" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"></textarea>
+			<textarea id="text_editor" class="text-editor prettyprint" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"></textarea>
 		</div>
 		<div class="text-editor-buttons-holder">
 			<div class="buttons-holder">
@@ -27,6 +27,6 @@
 		setTimeout(function(){
 			$('#tip1').addClass('animated fadeOutDown');
 		}, 2000);
-	});
 
+	});
 </script>

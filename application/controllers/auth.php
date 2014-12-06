@@ -71,10 +71,10 @@ class Auth extends FrontController {
 		    ]);
 
 		    // If you are using Eventbrite you will need to add the grant_type parameter (see below)
-		    $token = $provider->getAccessToken('authorization_code', [
-		        'code' => $this->input->get('code'),
-		        'grant_type' => 'authorization_code'
-		    ]);
+		    // $token = $provider->getAccessToken('authorization_code', [
+		    //     'code' => $this->input->get('code'),
+		    //     'grant_type' => 'authorization_code'
+		    // ]);
 
 		    // Optional: Now you have a token you can look up a users profile data
 		    try {
