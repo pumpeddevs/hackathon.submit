@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Instruct Me!</title>
+	<title><?php echo $title; ?></title>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/meyers-reset.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/bootrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/animate.min.css" />
