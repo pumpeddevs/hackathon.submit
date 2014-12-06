@@ -9,9 +9,13 @@ class Auth extends FrontController {
 
 	private $api = array(
 			'Facebook' => array(
-					'api_key'    => '817918001602609',
-					'api_secret' => '1837bc1927e9976659eac193086e814f'
-			 )
+					'client_id'     => '817918001602609',
+					'client_secret' => '1837bc1927e9976659eac193086e814f'
+			 ),
+			'Google' => array(
+				'client_id'     => '1083567373902-ktkflmvll25vfr44t6m5k7hdku0mlpvq.apps.googleusercontent.com',
+				'client_secret' => 'LIT16LPia1gSRxSWkjiliT7d'
+			)
 	);
 
 	private $provider;
@@ -26,17 +30,10 @@ class Auth extends FrontController {
 	{
 		$provider_name = $this->input->get('auth');
 
-		if ( ! $this->input->get('code')) {
-			$class = 'League\OAuth2\Client\Provider\\' . $provider_name;
-			$this->provider = new $class(array(
-				'clientId'     => $this->api[$provider_name]['api_key'],
-				'clientSecret' => $this->api[$provider_name]['api_secret'],
-				'redirectUri'  => base_url('auth/login/?auth=' . $provider_name),
-				'scopes'       => array('email')
-			));
-		}
+		// if ( ! $this->input->get('code')) {
+		// 			}
 
-		$this->_session($this->provider);
+		$this->_session($provider_name);
 	}
 
 	public function user()
@@ -44,8 +41,17 @@ class Auth extends FrontController {
 		
 	}
 
-	private function _session($provider)
+	private function _session($provider_name)
 	{
+
+		$class = 'League\OAuth2\Client\Provider\\' . $provider_name;
+		$provider = new $class(array(
+			'clientId'     => $this->api[$provider_name]['client_id'],
+			'clientSecret' => $this->api[$provider_name]['client_secret'],
+			'redirectUri'  => base_url('auth/login/?auth=' . $provider_name),
+			'scopes'       => array('email')
+		));
+
 
 		if ( ! $this->input->get('code')) {
 
