@@ -6,7 +6,7 @@
 		</div>
 		<div class="title"><p>Text Editor</p></div>
 		<div class="text-editor-holder">
-			<textarea class="text-editor prettyprint" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"></textarea>
+			<textarea id="text-editor" class="text-editor prettyprint" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"></textarea>
 		</div>
 		<div class="text-editor-buttons-holder">
 			<div class="buttons-holder">
@@ -23,6 +23,16 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
+		var textarea = $('#text-editor');
+		var myCodeMirror = CodeMirror.fromTextArea(textarea.get(0), {
+				lineNumbers: true,
+		    styleActiveLine: true,
+		    matchBrackets: true,
+		    theme: 'monokai',
+		    mode: "javascript",
+		    gutters: ["CodeMirror-lint-markers"],
+		    lint: true
+		});
 		$('#tip1').addClass('bounceOutUp');
 	});
 </script>
