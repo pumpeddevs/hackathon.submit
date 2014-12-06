@@ -1,0 +1,43 @@
+html, body { width:100%; height:100%; font-family: "Helvetica", Arial, sans-serif; font-weight: 200; }
+
+* { margin:0px; padding:0px; box-sizing:border-box; }
+
+textarea, input, button { font-family: "Helvetica", Arial, sans-serif; font-weight: 100; }
+
+/* Colors
+
+	black - 1F1F21
+	orange - FD7C4D
+	white - FFF
+	grey - DDD
+*********************/
+
+
+/* Commons
+*********************/
+.pull-right { float:right; }
+
+.pull-left { float:left; }
+
+#appHolder { width:100%; height:100%; overflow: hidden; }
+
+/* Sidebar
+*********************/
+.sidebar { width:35%; height:100%; font-weight:200 !important; box-shadow:1px 1px 5px 5px rgb(0, 0, 0); z-index: 2; }
+.sidebar .title { width:100%; height:25px; background:#232426; padding:5px 5px; }
+.sidebar .title p { color:#FFF; }
+
+.sidebar .history { width:100%; height:38%; height:-moz-calc(38% - 25px); height:-webkit-calc(38% - 25px); height:-calc(38% - 25px); background:#CCC; }
+
+.sidebar .text-editor-buttons-holder { width:100%; height:4%; background:#AAA; }
+.sidebar .text-editor-buttons-holder .buttons-holder { width:100%; height:100%; }
+.sidebar .text-editor-buttons-holder .buttons-holder button { width:33.33333%; height:100%; background:#FD7C4D; border:none; float:left; color:#FFF; cursor:pointer; font-size:1.2em;}
+.sidebar .text-editor-buttons-holder .buttons-holder button:active { background: #DDD; color:#1F1F21; }
+.sidebar .text-editor-buttons-holder .buttons-holder button:not(:last-child) { border-right: 3px solid #1F1F21; }
+
+.sidebar .text-editor-holder { width:100%; height:-moz-calc(58% - 25px); }
+.sidebar .text-editor-holder .text-editor { width:100%; height:100%; background-color:#2F3134; color:#FD7C4D; font-size:1.1em; padding:10px; resize:none; border:none; }
+
+/* Game Holder
+*********************/
+.game-holder { width:65%; height:100%; background:#DDD;z-index: 1; padding:90px; }
