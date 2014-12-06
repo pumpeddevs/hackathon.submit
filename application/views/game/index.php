@@ -6,7 +6,7 @@
 		</div>
 		<div class="title"><p>Text Editor</p></div>
 		<div class="text-editor-holder">
-			<textarea class="text-editor" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"></textarea>
+			<textarea class="text-editor prettyprint" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"></textarea>
 		</div>
 		<div class="text-editor-buttons-holder">
 			<div class="buttons-holder">
@@ -17,6 +17,6 @@
 		</div>
 	</div>
 	<div class="game-holder pull-right">
-		<img alt="im-logo" src="<?php echo base_url(); ?>images/im-logo.png" />
+		<div class="alert alert-success" role="alert">Welcome to Instruct.Me. </div>
 	</div>
-</duv>
+</div>
