@@ -6,5 +6,7 @@
  * @author Pumpeddevs <pumpeddevs@gmail.com>
  */
 class Auth extends FrontController{
-	//put your code here
+	public function index() {
+		$this->render('auth/index');
+	}
 }
