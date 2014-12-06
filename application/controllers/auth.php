@@ -20,7 +20,11 @@ class Auth extends FrontController {
 
 	private $provider;
 
-	public function index() 
+	public function __construct() {
+		parent::__construct();
+	}
+
+	public function index()
 	{
 		$this->title = "Instruct.me";
 		$this->render('auth/index');
@@ -38,7 +42,7 @@ class Auth extends FrontController {
 
 	public function user()
 	{
-		
+
 	}
 
 	private function _session($provider_name)
