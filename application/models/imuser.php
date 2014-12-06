@@ -12,4 +12,12 @@ class ImUser extends CI_Model{
 
 		return $this->db->query($sql, array($email, $token));
 	}
+
+	/**
+	 * NOT YET WORKING
+	 */
+	public function updateUser($id,$email,$token) {
+		$sql = "UPDATE im_user set email = ?, token = ? WHERE id = ?";
+		return $this->db->query($sql, array($email,$token,$id));
+	}
 }
