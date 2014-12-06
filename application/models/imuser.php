@@ -18,10 +18,9 @@ class ImUser extends CI_Model{
 	}
 
 	public function insertUser($email,$token) {
-		$data = array(
-			'email'=>$email,
-			'token'=>$token,
-		);
-		$this->db->insert('im_user',$data);
+		$sql = "INSERT INTO im_user (email, token) "
+				. "VALUES (?, ?)";
+
+		return $this->db->query($sql, array($email, $token));
 	}
 }

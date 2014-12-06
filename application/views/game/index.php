@@ -33,6 +33,10 @@
 		    gutters: ["CodeMirror-lint-markers"],
 		    lint: true
 		});
-		$('#tip1').addClass('bounceOutUp');
+		// Tutorial 
+		setTimeout(function(){
+			$('#tip1').addClass('animated fadeOutDown');
+		}, 2000);
 	});
+
 </script>
