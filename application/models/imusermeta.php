@@ -1,5 +1,11 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+/**
+ * How to use in controller
+ * $this->load->model('ImUserMeta');
+ * $this->ImUserMeta->insertSingleRow('1','asdsa','dasfd');
+ *
+ */
 class ImUserMeta extends CI_Model {
 
 	public function __construct() {
