@@ -23,9 +23,9 @@ class BaseController extends CI_Controller {
 	}
 
     public function render($view, $param=array()) {
-        $data['view'] = $view;
-        $data['param'] = $param;
-		$data['title'] = $this->title;
+				$data['view']  = $view;
+				$data['param'] = $param;
+				$data['title'] = $this->title;
         $this->load->view($this->layout,$data);
     }
 
@@ -73,5 +73,15 @@ class BaseController extends CI_Controller {
 		} else {
 			$this->render('errorpage/pagenotfound');
 		}
+	}
+
+	/**
+	* var_dump helper
+	*/
+	public function dd($val)
+	{
+		echo "<pre>";
+		var_dump($val);
+		die;
 	}
 }

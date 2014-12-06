@@ -12,11 +12,11 @@
 
 
 $hook['pre_system'] = array(
-	'class'=>'MY_Autoloader',
-	'function'=>'register',
-	'filename'=>'MY_Autoloader.php',
-	'filepath'=>'hooks',
-	'params'=>array(APPPATH.'libraries/')
+	'class'    => 'MY_Autoloader',
+	'function' => 'register',
+	'filename' => 'MY_Autoloader.php',
+	'filepath' => 'hooks',
+	'params'   => array(APPPATH.'libraries/')
 );
 /* End of file hooks.php */
 /* Location: ./application/config/hooks.php */
