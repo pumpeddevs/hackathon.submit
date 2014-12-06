@@ -23,6 +23,16 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
+		var textarea = $('#text-editor');
+		var myCodeMirror = CodeMirror.fromTextArea(textarea.get(0), {
+				lineNumbers: true,
+		    styleActiveLine: true,
+		    matchBrackets: true,
+		    theme: 'monokai',
+		    mode: "javascript",
+		    gutters: ["CodeMirror-lint-markers"],
+		    lint: true
+		});
 		// Tutorial 
 		setTimeout(function(){
 			$('#tip1').addClass('animated fadeOutDown');
