@@ -36,6 +36,10 @@ define('FOPEN_READ_WRITE_CREATE',				'a+b');
 define('FOPEN_WRITE_CREATE_STRICT',				'xb');
 define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 
+define('FB_CLIENT_ID','817918001602609');
+define('FB_CLIENT_SECRET', '1837bc1927e9976659eac193086e814f');
+define('GOOGLE_CLIENT_ID', '1083567373902-ktkflmvll25vfr44t6m5k7hdku0mlpvq.apps.googleusercontent.com');
+define('GOOGLE_CLIENT_SECRET', 'LIT16LPia1gSRxSWkjiliT7d');
 
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */
