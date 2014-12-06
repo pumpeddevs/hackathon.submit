@@ -2,6 +2,11 @@
 
 class Game extends FrontController {
 
+	public function __construct() {
+		parent::__construct();
+		$this->title = 'Instruct Me';
+	}
+
 	public function index() {
 		$this->render('game/index');
 	}
