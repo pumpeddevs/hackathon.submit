@@ -5,6 +5,11 @@
  *
  * @author Pumpeddevs <pumpeddevs@gmail.com>
  */
-class Auth extends FrontController{
+class Auth extends FrontController {
 	//put your code here
+
+	public function login()
+	{
+		
+	}
 }

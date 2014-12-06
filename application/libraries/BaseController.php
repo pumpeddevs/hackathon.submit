@@ -23,9 +23,9 @@ class BaseController extends CI_Controller {
 	}
 
     public function render($view, $param=array()) {
-        $data['view'] = $view;
-        $data['param'] = $param;
-		$data['title'] = $this->title;
+				$data['view']  = $view;
+				$data['param'] = $param;
+				$data['title'] = $this->title;
         $this->load->view($this->layout,$data);
     }
     
