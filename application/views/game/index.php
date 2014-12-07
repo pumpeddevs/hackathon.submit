@@ -6,7 +6,7 @@
 		</div>
 		<div class="title"><p>Text Editor</p></div>
 		<div class="text-editor-holder">
-			<textarea id="text_editor" class="text-editor prettyprint" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"></textarea>
+			<textarea id="text-editor" class="text-editor prettyprint" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"></textarea>
 		</div>
 		<div class="text-editor-buttons-holder">
 			<div class="buttons-holder">
@@ -30,8 +30,8 @@
 		    matchBrackets: true,
 		    theme: 'monokai',
 		    mode: "javascript",
-		    gutters: ["CodeMirror-lint-markers"],
-		    lint: true
+		    // gutters: ["CodeMirror-lint-markers"],
+		    lint: false
 		});
 		// Tutorial 
 		setTimeout(function(){

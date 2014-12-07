@@ -1,8 +1,13 @@
-html, body { width:100%; height:100%; font-family: "Helvetica", Arial, sans-serif; font-weight: 200; }
+html, body { width:100%; height:100%; font-family: monospace, Arial, sans-serif; font-weight: 300; }
 
 * { margin:0px; padding:0px; box-sizing:border-box; }
 
-textarea, input, button { font-family: "Helvetica", Arial, sans-serif; font-weight: 100; }
+a:hover {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+/*textarea, input, button { font-family: "Helvetica", Arial, sans-serif; font-weight: 100; }*/
 
 /* Colors
 
@@ -11,6 +16,30 @@ textarea, input, button { font-family: "Helvetica", Arial, sans-serif; font-weig
 	white - FFFFFF
 	grey - DDDDDD
 *********************/
+
+/* Blinking cursor
+*****************/
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
 
 
 /* Commons
@@ -47,4 +76,73 @@ textarea, input, button { font-family: "Helvetica", Arial, sans-serif; font-weig
 *********************/
 .CodeMirror {
 	height: 100%;
+}
+
+
+.monokai-str {
+	color: #e6db74;
+}
+
+.monokai-line {
+	background: #373831;
+}
+
+.monokai-key {
+	color: #f92672;
+}
+
+.monokai-link {
+	color: #ae81ff;
+}
+
+.monokai-comm {
+	color: #75715e;
+}
+
+.monokai-def {
+	color: #9effff;
+}
+
+.white,
+a.monokai-comm:active,
+a.monokai-comm:focus,
+a.monokai-comm:hover {
+	color: #FFF;
+}
+
+
+/* Home
+********************/
+.home-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgb(45, 45, 45);
+	width: 100%;
+	height: 100%;
+}
+
+.tag-line {
+	font-size: 50px;
+	margin-top: 8%;
+}
+
+.home-input {
+	width: 80%;
+	margin: 10% auto 0;
+	font-size: 0;
+}
+
+.home-input input {	
+	padding: 10px;
+	border: none;
+}
+
+.home-input span,
+.home-input input {
+	font: 500 30px/30px monospace, sans-serif;
+}
+
+.login-wrapper ul li {
+	list-style: disc;
 }

@@ -2,22 +2,44 @@
 
 class ImUser extends CI_Model{
 
-	public function __construct() {
+	public function __construct() 
+	{
 		parent::__construct();
 	}
 
-	public function insertUser($email,$token) {
+	public function store($user, $token) 
+	{
+		$exists = $this->getUser($user->email);
+
+		if ($exists) {
+			 $this->update($exists->id, $user, $token);
+
+			 return $exists->id;
+		}
+
 		$sql = "INSERT INTO im_user (email, token) "
 				. "VALUES (?, ?)";
 
-		return $this->db->query($sql, array($email, $token));
+		$this->db->query($sql, array($user->email, $token));
+
+		return $this->db->insert_id();
+	}
+
+	public function getUser($email)
+	{
+		$sql = "SELECT * FROM im_user WHERE email = ?";
+
+		$res = $this->db->query($sql, array($email));
+
+		return $res->row();
 	}
 
 	/**
 	 * NOT YET WORKING
 	 */
-	public function updateUser($id,$email,$token) {
-		$sql = "UPDATE im_user set email = ?, token = ? WHERE id = ?";
-		return $this->db->query($sql, array($email,$token,$id));
+	public function update($id, $user, $token) {
+		$sql = "UPDATE im_user SET email = ?, token = ? WHERE id = ?";
+
+		return $this->db->query($sql, array($user->email, $token, $id));
 	}
 }
