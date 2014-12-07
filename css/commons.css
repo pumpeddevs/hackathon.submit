@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 100; }
 
 #appHolder { width:100%; height:100%; overflow: hidden; }
 
-.tuts-btn { background:#D9666F; padding:7px 7px 5px; border:0px; color:#FFF; line-height: 1; vertical-align: middle; }
+.tuts-btn { background:#C95861; padding:7px 7px 5px; border:0px; color:#FFF; line-height: 1; vertical-align: middle; }
 .tuts-btn:active { background:#DDD; color:#555; }
 
 /* Sidebar
@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 100; }
 
 .sidebar .text-editor-buttons-holder { width:100%; height:4%; background:#AAA; }
 .sidebar .text-editor-buttons-holder .buttons-holder { width:100%; height:100%; }
-.sidebar .text-editor-buttons-holder .buttons-holder button { width:33.33333%; height:100%; background:#D9666F; border:none; float:left; color:#FFF; cursor:pointer; font-size:1.2em; }
+.sidebar .text-editor-buttons-holder .buttons-holder button { width:33.33333%; height:100%; background:#C95861; border:none; float:left; color:#FFF; cursor:pointer; font-size:1.2em; }
 .sidebar .text-editor-buttons-holder .buttons-holder button:active { background: #DDD; color:#1F1F21; }
 .sidebar .text-editor-buttons-holder .buttons-holder button:not(:last-child) { border-right: 3px solid #1F1F21; }
 
@@ -99,8 +99,8 @@ h1, h2, h3, h4, h5, h6 { font-weight: 100; }
 
 /* Tuts modal user *********/
 .tutorial-holder { width:100%; height:100%; background:rgba(255,255,255,0.6); position:absolute; z-index: 100; }
-.tutorial-holder .tutorial-box { width:80%; height:45%; background:#FFF; border:5px solid #D9666F; position:relative; margin: 0 auto; top:30%; box-shadow:0 0 30px #DDD; font-family: "Helovetica", Arial, sans-serif; font-weight: 600; }
-.tutorial-holder .tutorial-box .tutorial-box-content { width:100%; height:80%; padding:50px 40px; background:#D9666F; text-align: center; color:#FFF; }
+.tutorial-holder .tutorial-box { width:80%; height:45%; background:#FFF; border:5px solid #C95861; position:relative; margin: 0 auto; top:30%; box-shadow:0 0 30px #DDD; font-family: "Helovetica", Arial, sans-serif; font-weight: 600; }
+.tutorial-holder .tutorial-box .tutorial-box-content { width:100%; height:80%; padding:45px 40px; background:#C95861; text-align: left; color:#FFF; }
 .tutorial-holder .tutorial-box .tutorial-box-content h1,
 .tutorial-holder .tutorial-box .tutorial-box-content h2,
 .tutorial-holder .tutorial-box .tutorial-box-content h3,
