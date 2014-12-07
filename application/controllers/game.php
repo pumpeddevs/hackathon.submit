@@ -8,7 +8,6 @@ class Game extends FrontController {
 	}
 
 	public function index() {
-		var_dump($this->session->userdata('user'));
 		$this->render('game/index');
 	}
 

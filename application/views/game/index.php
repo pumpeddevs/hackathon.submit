@@ -2,7 +2,7 @@
 	<div class="sidebar pull-right">
 		<div class="title"><p>History</p></div>
 		<div class="history">
-			
+			<pre class="prettyprint">/** This is a comment <br/> just a sample code when cleared */<br/>this.hello();</pre>
 		</div>
 		<div class="title"><p>Text Editor</p></div>
 		<div class="text-editor-holder">
@@ -17,7 +17,11 @@
 		</div>
 	</div>
 	<div class="game-holder pull-right">
-		<div id="tip1" class="alert alert-success" role="alert">Welcome to Instruct.Me. </div>
+		<?php $this->load->view('game/first'); ?>
+		<?php $this->load->view('template/navbar'); ?>
+		<div class="game-content-holder">
+			
+		</div>
 	</div>
 </div>
 
@@ -25,7 +29,7 @@
 	$(document).ready(function() {
 		var textarea = $('#text-editor');
 		var myCodeMirror = CodeMirror.fromTextArea(textarea.get(0), {
-				lineNumbers: true,
+			lineNumbers: true,
 		    styleActiveLine: true,
 		    matchBrackets: true,
 		    theme: 'monokai',

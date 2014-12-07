@@ -15,7 +15,7 @@
 
 		<p id="congrats" class="h3 monokai-comm"></p>
 
-		<div id="login-wrapper" class"login">
+		<div id="login-wrapper" class"login" hidden>
 			<span class="h2 monokai-comm">Login with: </span>
 			<ul class="list-inline">
 				<li><a href="<?php echo base_url('home/login/?auth=Facebook') ?>" class="h2 monokai-comm">Facebook</a></li>
