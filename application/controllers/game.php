@@ -17,7 +17,6 @@ class Game extends FrontController {
 			$id = $this->session->userdata('im_uid');
 			echo json_encode(array('status'=>
 				$this->ImUserMeta->updateIsNew($id)));
-
 		}
 	}
 }
