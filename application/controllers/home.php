@@ -108,4 +108,10 @@ class Home extends FrontController {
 		    echo $token->expires;
 		}
 	}
+
+
+	public function logout() {
+		$this->session->sess_destroy();
+		redirect('home');
+	}
 }
