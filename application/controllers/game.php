@@ -23,9 +23,22 @@ class Game extends FrontController {
 	public function update_disclaimer() {
 		if($this->isAjax() && $this->session->userdata('im_user')!== false) {
 			$this->load->model('ImUserMeta');
-			$this->session->userdata('im_user')[1]['disclaimer_on'] = 0;
-			$id = $this->session->userdata('im_user')[0]->id;
-			echo json_encode(array('status'=>$this->ImUserMeta->updateMeta($id, 'disclaimer_on')));
+
+			$session = $this->session->userdata('im_user');
+			$session[1]['disclaimer_on'] = 0;
+
+			$this->session->set_userdata('im_user', array($session[0], $session[1]));
+			$id = $session[0]->id;
+			echo json_encode(
+							array(
+								'status'=> $this->ImUserMeta->update(
+															array(
+																'user_id' => $id, 
+																'key'     => 'disclaimer_on',
+																'value'   => 0)
+															)
+							)
+					);
 		}
 	}
 }

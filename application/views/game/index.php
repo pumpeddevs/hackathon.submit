@@ -18,7 +18,15 @@
 	</div>
 	<div class="game-holder pull-right">
 		<?php $this->load->view('game/tutorial'); ?>
-		<?php $this->load->view('game/disclaimer'); ?>
+	
+		<?php 
+		 	$session = $this->session->userdata('im_user')[1];
+
+			if (!isset($session['disclaimer_on'])
+					|| $session['disclaimer_on'] === 1) {
+				$this->load->view('game/disclaimer');
+			}
+		?>
 		<?php $this->load->view('template/navbar'); ?>
 		<div class="game-content-holder">
 		

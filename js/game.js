@@ -36,6 +36,8 @@
 				disclaimer = $('#dis-wrapper');
 
 		if (disclaimer) {
+			disclaimer.fadeOut('slow');
+			
 			if (disOff && disOff.is(':checked')) {
 
 				$.post(baseUrl + 'game/update_disclaimer',
@@ -43,18 +45,16 @@
 					function(data, textStatus, xhr) {
 						if(data.status == true) {
 							// Start this shit
+							disclaimer.remove();
 						} else {
 							// Do not start and show a warning
 						}
 					}, 'json'
 				);
 			}
-
-			disclaimer.fadeOut('slow');
 		}
 
 		timerStart();
-
 	});
 
 	function timerStart() {
