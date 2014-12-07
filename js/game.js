@@ -8,11 +8,11 @@
 		theme: 'monokai',
 		mode: "javascript",
 		// gutters: ["CodeMirror-lint-markers"],
-		lint: false
+		lint: true
 	});
 
 	$('#clear_codes').click(function() {
-		$('#history').append(myCodeMirror.getValue())
+		$('#history').append(myCodeMirror.getValue()+'<br/>')
 					.removeClass('prettyprinted');
 		PR.prettyPrint();
 	});

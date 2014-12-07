@@ -5,10 +5,6 @@ isClickable = false;
 
 $(document).ready(function() {
 
-
-	// Tutorial 
-	//$('#tip1').addClass('animated fadeOutDown');
-
 	$('.welcome_tuts').hide();
 	steps[tut_page]();
 
@@ -49,13 +45,9 @@ $(document).ready(function() {
 });
 
 function clearTuts(tut_page, remove_page) {
-	// $(ids[tut_page]).addClass('animated fadeOutUp');
-	// $(ids[tut_page]).removeClass('animated fadeOutUp');
-	// $(ids[tut_page]).html('');
-	// $(ids[tut_page]).hide();
 	$('#'+ids[remove_page]).remove();
 	$('.typed-cursor').remove();
-	$('.tutorial-box-content').append('<span id="'+ids[tut_page]+'" class="welcome_tuts"></span>');
+	$('#tutorial_holder .im-modal .im-modal-content').append('<span id="'+ids[tut_page]+'" class="welcome_tuts"></span>');
 }
 
 function welcomeUser() {
@@ -142,7 +134,7 @@ function doTyped(id, strings_used, callback) {
 }
 
 function closeFirstTutorial() {
-	$('#tutorial_holder .tutorial-box').addClass('animated fadeOutLeft');
+	$('#tutorial_holder .im-modal').addClass('animated fadeOutLeft');
 	setTimeout(function() {
 		$('#tutorial_holder').remove();
 	}, 1000);

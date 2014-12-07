@@ -140,7 +140,9 @@ a.monokai-comm:hover {
 .game-holder .navbar .nav > li > a { color:#FFF; }
 .game-holder .navbar .nav > li.active > a  { color:#555; }
 
-.game-holder .game-content-holder { width:100%; height:85%; height:-moz-calc(100% - 50px); height:-webkit-calc(100% - 50px); height:calc(100% - 50px); }
+.game-holder .game-content-holder { width:100%; height:75%; height:-moz-calc(90% - 50px); height:-webkit-calc(90% - 50px); height:calc(90% - 50px); }
+
+.game-holder .console { width:100%; height:10%; background:#1F1F21; }
 
 /* Game Tutorials
 *********************/

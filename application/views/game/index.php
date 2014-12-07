@@ -80,6 +80,9 @@
 			</div>
 
 		</div>
+		<div class="console">
+
+		</div>
 	</div>
 </div>
 
