@@ -106,6 +106,13 @@ a.monokai-comm:focus,
 a.monokai-comm:hover {
   color: #FFF;
 }
+
+.v-fix {
+  height: 100%;
+  vertical-align: middle;
+  width: 0;
+  display: inline-block;
+}
 /* Sidebar
 *********************/
 .sidebar { width:35%; height:100%; font-weight:200 !important; border-left:5px solid #1F1F21; }
@@ -139,17 +146,17 @@ a.monokai-comm:hover {
 *********************/
 
 /* Tuts modal user *********/
-.tutorial-holder { width:100%; height:100%; background:rgba(255,255,255,0.6); position:absolute; z-index: 100; }
-.tutorial-holder .tutorial-box { width:80%; height:60%; background:#FFF; border:5px solid #04BF9D; position:relative; margin: 0 auto; top:20%; box-shadow:0 0 30px #DDD; font-family: "Helovetica", Arial, sans-serif; font-weight: 600; }
-.tutorial-holder .tutorial-box .tutorial-box-content { width:100%; height:80%; padding:45px 40px; background:#04BF9D; text-align: left; color:#FFF; overflow: scroll; }
-.tutorial-holder .tutorial-box .tutorial-box-content h1,
-.tutorial-holder .tutorial-box .tutorial-box-content h2,
-.tutorial-holder .tutorial-box .tutorial-box-content h3,
-.tutorial-holder .tutorial-box .tutorial-box-content h4,
-.tutorial-holder .tutorial-box .tutorial-box-content h5,
-.tutorial-holder .tutorial-box .tutorial-box-content h6 { margin-bottom: 25px; display: inline; }
+.modal-wrapper { width:100%; height:100%; background:rgba(255,255,255,0.6); position:absolute; z-index: 100; }
+.modal-wrapper .im-modal { width:80%; height:60%; background:#FFF; border:5px solid #04BF9D; position:relative; margin: 0 auto; top:20%; box-shadow:0 0 30px #DDD; font-family: "Helovetica", Arial, sans-serif; font-weight: 600; }
+.modal-wrapper .im-modal .im-modal-content { width:100%; height:80%; padding:45px 40px; background:#04BF9D; text-align: left; color:#FFF; overflow: scroll; }
+.modal-wrapper .im-modal .im-modal-content h1,
+.modal-wrapper .im-modal .im-modal-content h2,
+.modal-wrapper .im-modal .im-modal-content h3,
+.modal-wrapper .im-modal .im-modal-content h4,
+.modal-wrapper .im-modal .im-modal-content h5,
+.modal-wrapper .im-modal .im-modal-content h6 { margin-bottom: 25px; display: inline; }
 
-.tutorial-holder .tutorial-box .tutorial-box-footer { width:100%; height:20%; padding:10px; position: relative; text-align: center; }
+.modal-wrapper .im-modal .im-modal-footer { width:100%; height:20%; padding:10px; position: relative; text-align: center; }
 
 
 
@@ -321,21 +328,6 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   /*top: 50%;*/
   /*margin: -20px 0 0 -20px;*/
   margin: auto;
-  -webkit-animation-name: bounce;
-  -moz-animation-name: bounce;
-  -o-animation-name: bounce;
-  -ms-animation-name: bounce;
-  animation-name: bounce;
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  -ms-animation-duration: 1s;
-  animation-duration: 1s;
 }
 
 .pin img {
@@ -518,4 +510,8 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
   }
+}
+
+#dis-wrapper .im-modal {
+  height: 40%;
 }

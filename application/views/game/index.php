@@ -17,7 +17,8 @@
 		</div>
 	</div>
 	<div class="game-holder pull-right">
-		<?php $this->load->view('game/first'); ?>
+		<?php $this->load->view('game/tutorial'); ?>
+		<?php $this->load->view('game/disclaimer'); ?>
 		<?php $this->load->view('template/navbar'); ?>
 		<div class="game-content-holder">
 		
@@ -82,23 +83,4 @@
 	</div>
 </div>
 
-<script type="text/javascript">
-	$(document).ready(function() {
-		var textarea = $('#text_editor');
-		var myCodeMirror = CodeMirror.fromTextArea(textarea.get(0), {
-			lineNumbers: true,
-		    styleActiveLine: true,
-		    matchBrackets: true,
-		    theme: 'monokai',
-		    mode: "javascript",
-		    // gutters: ["CodeMirror-lint-markers"],
-		    lint: false
-		});
-
-		$('#clear_codes').click(function() {
-			$('#history').append(myCodeMirror.getValue())
-						.removeClass('prettyprinted');
-			PR.prettyPrint();
-		});
-	});
-</script>
+<script type="text/javascript" src="<?php echo base_url('js/game.js') ?>"></script>

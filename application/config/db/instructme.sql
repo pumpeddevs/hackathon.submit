@@ -45,6 +45,8 @@ CREATE TABLE IF NOT EXISTS `im_score` (
   `level_id` int(11) NOT NULL,
   `score` int(11) NOT NULL,
   `line_count` int(11) NOT NULL,
+  `start_time` varchar(30) NOT NULL,
+  `<end></end>_time` varchar(30) NOT NULL,
   `date_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
@@ -58,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `im_score` (
 CREATE TABLE IF NOT EXISTS `im_user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(40) NOT NULL,
-  `token` varchar(100) NOT NULL,
+  `token` text NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
@@ -73,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `im_user_meta` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `meta_key` varchar(50) NOT NULL,
-  `meta_value` varchar(100) NOT NULL,
+  `meta_value` text NOT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
