@@ -38,10 +38,14 @@
 		if (disclaimer) {
 			if (disOff && disOff.is(':checked')) {
 
-				$.post(baseUrl + 'game/disclaimer_off',
+				$.post(baseUrl + 'game/update_disclaimer',
 					{'disclaimer_off' : disOff.val()},
 					function(data, textStatus, xhr) {
-
+						if(data.status == true) {
+							// Start this shit
+						} else {
+							// Do not start and show a warning
+						}
 					}, 'json'
 				);
 			}
@@ -57,7 +61,7 @@
 
 		console.log('timer starts now!');
 	}
-	
+
 	$('#run_codes').click(function(){
 		try{
 			eval(myCodeMirror.getValue());

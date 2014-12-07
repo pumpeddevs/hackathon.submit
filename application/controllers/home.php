@@ -54,7 +54,12 @@ class Home extends FrontController {
 		}
 
 		// Get all metadata
-		$usermeta = $this->ImUserMeta->getMeta($userdata->id);
+		$meta = $this->ImUserMeta->getMeta($userdata->id);
+
+		$usermeta = array();
+		foreach ($meta as $key => $value) {
+			$usermeta[$value['meta_key']] = $value['meta_value'];
+		}
 
 		$this->session->set_userdata('im_user', array($userdata, $usermeta));
 

@@ -65,7 +65,7 @@ class ImUserMeta extends CI_Model {
 
 		$res = $this->db->query($sql, array($id));
 
-		return $res->result();
+		return $res->result_array();
 	}
 
 	/**
@@ -80,6 +80,17 @@ class ImUserMeta extends CI_Model {
 		$this->db->query($sql, array(0,$id,'is_new'));
 		if($this->db->affected_rows() >= 1)
 			return true;
+		return false;
+	}
+
+	public function updateMeta($id, $meta_key) {
+		$sql = 'UPDATE im_user_meta SET meta_value = ? WHERE user_id = ? '
+			. ' AND meta_key = ?';
+
+		$this->db->query($sql, array(0,$id,$meta_key));
+
+		if($this->db->affected_rows() >= 1) return true;
+
 		return false;
 	}
 }

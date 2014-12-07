@@ -15,7 +15,7 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
 				<li class="active"><a href="#">Game <span class="sr-only">(current)</span></a></li>
-				<li><a href="#"><?php echo $this->session->userdata('name'); ?></a></li>
+				<li><a href="#"> <img src="<?php echo $this->session->userdata('im_user')[1]['photo']; ?>" style="width:20px; height:20px; margin-right:10px; " /><?php echo $this->session->userdata('im_user')[1]['name']; ?></a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Settings <span class="caret"></span></a>
 					<ul class="dropdown-menu" role="menu">
