@@ -31,6 +31,11 @@ h1, h2, h3, h4, h5, h6 { font-weight: 100; }
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
+
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1em;
 }
 @keyframes blink{
     0% { opacity:1; }
@@ -161,7 +166,7 @@ a.monokai-comm:hover {
 
 .home-input {
 	width: 80%;
-	margin: 10% auto 0;
+	margin: 10% auto 30px;
 	font-size: 0;
 }
 
@@ -179,6 +184,9 @@ a.monokai-comm:hover {
 	list-style: disc;
 }
 
+#login-wrapper {
+	margin-top: 20px;
+}
 
 
 /* Desert Theme for Prettify

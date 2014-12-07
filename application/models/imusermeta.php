@@ -12,9 +12,23 @@ class ImUserMeta extends CI_Model {
 		parent::__construct();
 	}
 
-	public function insertSingleRow($userid,$metakey,$metavalue) {
+	public function insertSingleRow($userid, $metakey, $metavalue) {
 		$sql = "INSERT INTO im_user_meta (user_id, meta_key, meta_value) "
 				. "VALUES (?, ?, ?)";
+
+		$q_meta = "SELECT * FROM im_user_meta
+							 WHERE user_id = ? AND meta_key = ?";
+
+	  $exists = $this->db->query($q_meta, array($userid, $metakey));
+
+		if ($exists->num_rows() > 0) {
+
+			return $this->update(array(
+														'user_id' => $userid, 
+														'value'   => $metavalue, 
+														'key'     => $metakey)
+													);
+		}
 
 		return $this->db->query($sql, array($userid, $metakey, $metavalue));
 	}
@@ -33,5 +47,24 @@ class ImUserMeta extends CI_Model {
 		}
 		$this->db->trans_complete();
 		return $this->db->trans_status();
+	}
+
+	public function update($data)
+	{
+		$sql = "UPDATE im_user_meta
+							SET meta_value = ?
+							WHERE user_id = ?
+										AND meta_key = ?";
+
+		return $this->db->query($sql, array($data['value'], $data['user_id'], $data['key']));
+	}
+
+	public function getMeta($id)
+	{
+		$sql = "SELECT * FROM im_user_meta WHERE user_id = ?";
+
+		$res = $this->db->query($sql, array($id));
+
+		return $res->result();
 	}
 }
