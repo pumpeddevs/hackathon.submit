@@ -22,12 +22,12 @@ class ImUserMeta extends CI_Model {
 	  $exists = $this->db->query($q_meta, array($userid, $metakey));
 
 		if ($exists->num_rows() > 0) {
-			$sql = "UPDATE im_user_meta
-							SET meta_value = ?
-							WHERE user_id = ?
-										AND meta_key = ?";
 
-			return $this->db->query($sql, array($metavalue, $userid, $metakey));
+			return $this->update(array(
+														'user_id' => $userid, 
+														'value'   => $metavalue, 
+														'key'     => $metakey)
+													);
 		}
 
 		return $this->db->query($sql, array($userid, $metakey, $metavalue));
@@ -47,6 +47,16 @@ class ImUserMeta extends CI_Model {
 		}
 		$this->db->trans_complete();
 		return $this->db->trans_status();
+	}
+
+	public function update($data)
+	{
+		$sql = "UPDATE im_user_meta
+							SET meta_value = ?
+							WHERE user_id = ?
+										AND meta_key = ?";
+
+		return $this->db->query($sql, array($data['value'], $data['user_id'], $data['key']));
 	}
 
 	public function getMeta($id)
