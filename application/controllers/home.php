@@ -40,17 +40,27 @@ class Home extends FrontController {
 		$this->load->model('ImUser');
 		$this->load->model('ImUserMeta');
 
-		// add user if not exists else update user token
-		$user_id = $this->ImUser->store($user, $token->accessToken);
+		$userdata = $this->ImUser->getUser($user->email);
 
-		if ($user_id) {
+		if(empty($userdata)) {
+			// insert to database
+			$user_id = $this->ImUser->store($user, $token->accessToken);
 
+			// Insert meta data
 			$this->ImUserMeta->insertSingleRow($user_id, 'name', $user->name);
 			$this->ImUserMeta->insertSingleRow($user_id, 'photo', $user->imageUrl);
 			$this->ImUserMeta->insertSingleRow($user_id, 'is_new', 1);
+			$this->ImUserMeta->insertSingleRow($user_id, 'disclaimer_on', 1);
 			$this->session->set_userdata('im_uid', $user_id);
-			redirect('game');
+			
 		}
+
+		// Get all metadata
+		$usermeta = $this->ImUserMeta->getMeta($userdata->id);
+
+		$this->session->set_userdata('im_user', array($userdata, $usermeta));
+
+		redirect('game');
 	}
 
 	private function _session($provider_name)

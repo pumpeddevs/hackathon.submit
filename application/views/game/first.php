@@ -1,4 +1,4 @@
-<!-- <div id="tutorial_holder" class="tutorial-holder" >
+<div id="tutorial_holder" class="tutorial-holder" >
 	<div class="tutorial-box">
 		<div class="tutorial-box-content">
 			<span id="welcome_content" class="welcome_tuts"></span>
@@ -10,7 +10,7 @@
 			<button id="next" class="tuts-btn">Next &gt;</button>
 		</div>
 	</div>
-</div> -->
+</div>
 
 <script type="text/javascript">
 	var tut_page = 0,
