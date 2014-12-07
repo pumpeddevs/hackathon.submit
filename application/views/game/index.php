@@ -2,17 +2,17 @@
 	<div class="sidebar pull-right">
 		<div class="title"><p>History</p></div>
 		<div class="history">
-			<pre class="prettyprint">/** This is a comment <br/> just a sample code when cleared */<br/>this.hello();</pre>
+			<pre id="history" class="prettyprint"></pre>
 		</div>
 		<div class="title"><p>Text Editor</p></div>
 		<div class="text-editor-holder">
-			<textarea id="text-editor" class="text-editor prettyprint" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"></textarea>
+			<textarea id="text_editor" class="text-editor prettyprint" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"></textarea>
 		</div>
 		<div class="text-editor-buttons-holder">
 			<div class="buttons-holder">
-				<button>Run</button>
-				<button>Stop</button>
-				<button>Clear</button>
+				<button id="run_codes" >Run</button>
+				<button id="stop_codes" >Stop</button>
+				<button id="clear_codes" >Clear</button>
 			</div>
 		</div>
 	</div>
@@ -27,7 +27,7 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
-		var textarea = $('#text-editor');
+		var textarea = $('#text_editor');
 		var myCodeMirror = CodeMirror.fromTextArea(textarea.get(0), {
 			lineNumbers: true,
 		    styleActiveLine: true,
@@ -36,6 +36,12 @@
 		    mode: "javascript",
 		    // gutters: ["CodeMirror-lint-markers"],
 		    lint: false
+		});
+
+		$('#clear_codes').click(function() {
+			$('#history').append(myCodeMirror.getValue())
+						.removeClass('prettyprinted');
+			PR.prettyPrint();
 		});
 	});
 </script>
