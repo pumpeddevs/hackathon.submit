@@ -1,4 +1,11 @@
 <div class="home-container text-center">
+
+	<video loop="true" autoplay="true">
+		 <!-- <source type="video/mp4" src="<?php  echo base_url('css/video-bg.mp4') ?>"> -->
+		 <source type="video/mp4" src="css/video-bg.mp4">
+		 	Does not support?
+	</video>
+
 		<h1 class="tag-line monokai-key text-center">
 			Our tagline here..
 		</h1>

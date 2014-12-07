@@ -30,7 +30,8 @@ class Home extends FrontController {
 
 		// if auth fails, return to home page with some error
 		if (!$session) {
-			return false;
+			$this->session->set_flashdata('failed_login', 'Please try again');
+			redirect('home');
 		}
 
 		$user  = $session['user'];

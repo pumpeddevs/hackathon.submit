@@ -14,7 +14,7 @@ class FrontController extends BaseController{
 	private function redirectIfAuthenticated() {
 		if($this->router->class == 'home' && $this->router->method == 'index'
 				&& $this->session->userdata('im_uid') !== false) {
-			redirect('game');
+			// redirect('game');
 		} else if($this->router->class != 'home' &&
 				$this->session->userdata('im_uid') === false) {
 			redirect('home');
