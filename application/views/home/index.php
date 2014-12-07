@@ -36,19 +36,19 @@
 				$congrats.empty();
 
 				$congrats.typed({
-			    strings: [
-											'Hello ' + $('#name').val() + '! ^500 <br >You now know how to print logs in javascript! ^500 <br>' +
-											'// Want to learn more? <br> <span class="h2 monokai-comm">'
-			    					],
-	        typeSpeed: 20,
-	        startDelay: 500,
+				    strings: [
+						'Hello ' + $('#name').val() + '! ^500 <br >You now know how to print logs in javascript! ^500 <br>' +
+						'// Want to learn more? <br> <span class="h2 monokai-comm">'
+				    ],
+		        	typeSpeed: 20,
+		        	startDelay: 500,
 
-	        callback: function() {
-	        	var $login = $('#login-wrapper');
-	        	if (!$login.is(':visible')) {
-	        		$login.fadeIn(3000);
-	        	}
-	        }
+		        	callback: function() {
+		        	var $login = $('#login-wrapper');
+			        	if (!$login.is(':visible')) {
+			        		$login.fadeIn(3000);
+			        	}
+			        }
 				});
 			}
 		});

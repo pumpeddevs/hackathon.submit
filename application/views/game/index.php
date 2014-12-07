@@ -37,10 +37,5 @@
 		    // gutters: ["CodeMirror-lint-markers"],
 		    lint: false
 		});
-		// Tutorial 
-		setTimeout(function(){
-			$('#tip1').addClass('animated fadeOutDown');
-		}, 2000);
-
 	});
 </script>

@@ -20,6 +20,8 @@ h1, h2, h3, h4, h5, h6 { font-weight: 100; }
 	white - FFFFFF
 	grey - DDDDDD
 	blue - 3F6F8C
+  Red - D9666F
+
 *********************/
 
 /* Blinking cursor
@@ -55,7 +57,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 100; }
 
 #appHolder { width:100%; height:100%; overflow: hidden; }
 
-.tuts-btn { background:#FD7C4D; padding:7px 7px 5px; border:0px; color:#FFF; line-height: 1; vertical-align: middle; }
+.tuts-btn { background:#D9666F; padding:7px 7px 5px; border:0px; color:#FFF; line-height: 1; vertical-align: middle; }
 .tuts-btn:active { background:#DDD; color:#555; }
 
 /* Sidebar
@@ -69,7 +71,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 100; }
 
 .sidebar .text-editor-buttons-holder { width:100%; height:4%; background:#AAA; }
 .sidebar .text-editor-buttons-holder .buttons-holder { width:100%; height:100%; }
-.sidebar .text-editor-buttons-holder .buttons-holder button { width:33.33333%; height:100%; background:#FD7C4D; border:none; float:left; color:#FFF; cursor:pointer; font-size:1.2em; }
+.sidebar .text-editor-buttons-holder .buttons-holder button { width:33.33333%; height:100%; background:#D9666F; border:none; float:left; color:#FFF; cursor:pointer; font-size:1.2em; }
 .sidebar .text-editor-buttons-holder .buttons-holder button:active { background: #DDD; color:#1F1F21; }
 .sidebar .text-editor-buttons-holder .buttons-holder button:not(:last-child) { border-right: 3px solid #1F1F21; }
 
@@ -80,7 +82,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 100; }
 *********************/
 .game-holder { width:65%; height:100%; background:#E1F2F2; position:relative; }
 
-.game-holder .navbar { margin:0px; border-radius: 0; background: #3F6F8C; border:0; }
+.game-holder .navbar { margin:0px; border-radius: 0; background: #3F6F8C; border:0; font-family: "Helvetica", Arial, sans-serif; }
 .game-holder .navbar .navbar-brand { color:#FFF; }
 .game-holder .navbar .nav > li > a { color:#FFF; }
 .game-holder .navbar .nav > li.active > a  { color:#555; }
@@ -92,9 +94,16 @@ h1, h2, h3, h4, h5, h6 { font-weight: 100; }
 
 /* Tuts modal user *********/
 .tutorial-holder { width:100%; height:100%; background:rgba(255,255,255,0.6); position:absolute; z-index: 100; }
-.tutorial-holder .tutorial-box { width:80%; height:45%; background:#FFF; border:5px solid #3F6F8C; position:relative; margin: 0 auto; top:30%; box-shadow:0 0 30px #DDD; }
-.tutorial-holder .tutorial-box .tutorial-box-content { width:100%; height:80%; padding:10px; background:#FFF; }
-.tutorial-holder .tutorial-box .tutorial-box-footer { width:100%; height:20%; background:#DDDDDD; padding:10px; position: relative; text-align: center; }
+.tutorial-holder .tutorial-box { width:80%; height:45%; background:#FFF; border:5px solid #D9666F; position:relative; margin: 0 auto; top:30%; box-shadow:0 0 30px #DDD; font-family: "Helovetica", Arial, sans-serif; font-weight: 600; }
+.tutorial-holder .tutorial-box .tutorial-box-content { width:100%; height:80%; padding:50px 40px; background:#D9666F; text-align: center; color:#FFF; }
+.tutorial-holder .tutorial-box .tutorial-box-content h1,
+.tutorial-holder .tutorial-box .tutorial-box-content h2,
+.tutorial-holder .tutorial-box .tutorial-box-content h3,
+.tutorial-holder .tutorial-box .tutorial-box-content h4,
+.tutorial-holder .tutorial-box .tutorial-box-content h5,
+.tutorial-holder .tutorial-box .tutorial-box-content h6 { margin-bottom: 25px; display: inline; }
+
+.tutorial-holder .tutorial-box .tutorial-box-footer { width:100%; height:20%; padding:10px; position: relative; text-align: center; }
 
 /* CodeMirror Customs
 *********************/
@@ -168,7 +177,7 @@ a.monokai-comm:hover {
 
 .login-wrapper ul li {
 	list-style: disc;
-=======
+}
 
 
 
