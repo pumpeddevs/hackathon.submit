@@ -15,8 +15,9 @@ class Game extends FrontController {
 		if($this->isAjax() && $this->session->userdata('im_uid') !== false) {
 			$this->load->model('ImUserMeta');
 			$id = $this->session->userdata('im_uid');
-			return json_encode(array('status'=>
+			echo json_encode(array('status'=>
 				$this->ImUserMeta->updateIsNew($id)));
+
 		}
 	}
 }
