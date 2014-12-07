@@ -20,7 +20,59 @@
 		<?php $this->load->view('game/first'); ?>
 		<?php $this->load->view('template/navbar'); ?>
 		<div class="game-content-holder">
+		
+			<div class="row rel">
+				<span class="dotted"></span>
+				<div class="col-xs-4">
+					<div class="stage pull-left line-down">Stage 3</div>
+				</div>
+				<div class="col-xs-4 text-center">
+					<div class="stage">Stage 2</div>
+				</div>
+				<div class="col-xs-4">
+					<div class="stage pull-right">START</div>
+				</div>
+			</div>
+
+			<div class="row rel">
+				<span class="dotted"></span>
+				<div class="col-xs-4">
+					<div class="stage pull-left">Stage 4</div>
+				</div>
+				<div class="col-xs-4 text-center">
+					<div class="stage">Stage 5</div>
+				</div>
+				<div class="col-xs-4">
+					<div class="stage line-down pull-right">Stage 6</div>
+				</div>
+			</div>
+
+			<div class="row rel">
+				<span class="dotted"></span>
+				<div class="col-xs-4">
+					<div class="stage pull-left line-down">Stage 9</div>
+				</div>
+				<div class="col-xs-4 text-center">
+					<div class="stage">Stage 8</div>
+				</div>
+				<div class="col-xs-4">
+					<div class="stage pull-right">Stage 7</div>
+				</div>
+			</div>
 			
+			<div class="row rel">
+				<span class="dotted"></span>
+				<div class="col-xs-4">
+					<div class="stage pull-left">Stage 10</div>
+				</div>
+				<div class="col-xs-4 text-center">
+					<div class="stage">Stage 11</div>
+				</div>
+				<div class="col-xs-4">
+					<div class="stage pull-right">Stage 12</div>
+				</div>
+			</div>
+
 		</div>
 	</div>
 </div>

@@ -17,14 +17,14 @@
 	<script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/addon/comment/comment.js'); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/addon/matchbrackets.js'); ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/addon/active-line.js'); ?>"></script>
-	<script src="//ajax.aspnetcdn.com/ajax/jshint/r07/jshint.js"></script>
+	<!-- <script src="//ajax.aspnetcdn.com/ajax/jshint/r07/jshint.js"></script>
 	<script src="https://rawgithub.com/zaach/jsonlint/79b553fb65c192add9066da64043458981b3972b/lib/jsonlint.js"></script>
 	<script src="https://rawgithub.com/stubbornella/csslint/master/release/csslint.js"></script>
 	<script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/addon/lint/lint.js'); ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/addon/lint/coffeescript-lint.js'); ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/addon/lint/javascript-lint.js'); ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/javascript.js'); ?>"></script>
-	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>-->
 	<script src="<?php echo base_url('js/vendor/typed.js'); ?>"></script>
 
 </head>

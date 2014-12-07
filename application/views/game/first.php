@@ -1,4 +1,4 @@
-<div id="tutorial_holder" class="tutorial-holder">
+<!-- <div id="tutorial_holder" class="tutorial-holder" >
 	<div class="tutorial-box">
 		<div class="tutorial-box-content">
 			<span id="welcome_content" class="welcome_tuts"></span>
@@ -7,19 +7,20 @@
 		<div class="tutorial-box-footer">
 			<div style="height:100%; vertical-align:middle; width:0px; display:inline-block;"></div>
 			<button id="skip" class="tuts-btn" onclick="closeFirstTutorial()">Skip</button>
-			<button id="prev" class="tuts-btn">Prev &lt;</button>
+			<button id="prev" class="tuts-btn">&lt; Prev</button>
 			<button id="next" class="tuts-btn">Next &gt;</button>
 		</div>
 	</div>
-</div>
+</div> -->
 
 <script type="text/javascript">
 	var tut_page = 0,
 	steps = [welcomeUser, firstPage],
 	ids   = ['#welcome_content', '#tuts_basic1'];
 
-	$(document).ready(function(){
-		
+	$(document).ready(function() {
+
+
 		// Tutorial 
 		//$('#tip1').addClass('animated fadeOutDown');
 
