@@ -1,4 +1,6 @@
 <div class="home-container text-center">
+		<?php echo $this->session->flashdata('failed_login'); ?>
+
 		<h1 class="tag-line monokai-key text-center">
 			Our tagline here..
 		</h1>
@@ -28,7 +30,7 @@
 <script src="<?php echo base_url('js/vendor/typed.js'); ?>"></script>
 <script>
 	$(document).ready(function() {
-		
+
 		$('#name').keypress(function(e) {
 
 			if (e.keyCode == 13) {
