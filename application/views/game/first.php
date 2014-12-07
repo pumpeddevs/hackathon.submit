@@ -16,7 +16,8 @@
 <script type="text/javascript">
 	var tut_page = 0,
 	steps = [welcomeUser, firstPage],
-	ids   = ['#welcome_content', '#tuts_basic1'];
+	ids   = ['welcome_content', 'tuts_basic1'],
+	isClickable = false;
 
 	$(document).ready(function(){
 		
@@ -32,6 +33,12 @@
 				return;
 			}
 
+			if(!isClickable) {
+				// print simple message
+				return;
+			}
+
+			isClickable = false;
 			clearTuts(tut_page);
 			tut_page++;
 			steps[tut_page]();
@@ -43,6 +50,12 @@
 				return;
 			}
 
+			if(!isClickable) {
+				// print simple message
+				return;
+			}
+
+			isClickable = false;
 			clearTuts(tut_page);
 			tut_page--;
 			steps[tut_page]();
@@ -51,11 +64,13 @@
 	});
 
 	function clearTuts(tut_page) {
-		$(ids[tut_page]).addClass('animated fadeOutUp');
-		$(ids[tut_page]).removeClass('animated fadeOutUp');
-		$(ids[tut_page]).html('');
-		$(ids[tut_page]).hide();
+		// $(ids[tut_page]).addClass('animated fadeOutUp');
+		// $(ids[tut_page]).removeClass('animated fadeOutUp');
+		// $(ids[tut_page]).html('');
+		// $(ids[tut_page]).hide();
+		$('#'+ids[tut_page]).remove();
 		$('.typed-cursor').remove();
+		$('.tutorial-box-content').append('<span id="'+ids[tut_page]+'" class="welcome_tuts"></span>');
 	}
 
 	function welcomeUser() {
@@ -72,6 +87,7 @@
         			$('#click_next').show();
 	        		$('#click_next').addClass('animated fadeInDown');
 	        	}, 1000);
+	        	isClickable = true;
         	}
 		});
 	}
@@ -81,7 +97,10 @@
 		$('#tuts_basic1').typed({
 			strings:['<h3>First let\'s get familiar with the app. :)</h3>'],
 			typeSpeed:1,
-			startDelay:500
+			startDelay:500,
+			callback:function() {
+				isClickable = true;
+			}
 		});
 	}
 
