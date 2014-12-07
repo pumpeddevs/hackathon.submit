@@ -8,5 +8,13 @@
 class FrontController extends BaseController{
 	public function __construct() {
 		parent::__construct();
+		$this->redirectIfAuthenticated();
+	}
+
+	private function redirectIfAuthenticated() {
+		if($this->router->class == 'home' && $this->router->method == 'index'
+				&& $this->session->userdata('im_uid') !== false) {
+			redirect('game');
+		}
 	}
 }
