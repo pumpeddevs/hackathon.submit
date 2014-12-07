@@ -63,6 +63,7 @@ class Home extends FrontController {
 			'scopes'       => array('email')
 		));
 
+		if($this->input->get('error')) die('Not authorized');
 
 		if ( ! $this->input->get('code')) {
 
