@@ -92,7 +92,6 @@ class Home extends FrontController {
 		    } catch (Exception $e) {
 
 		        // Failed to get user details
-//		        exit('Oh dear...');
 				$this->session->set_flashdata('failed_login', 'Please try again');
 				redirect('home');
 		    }
