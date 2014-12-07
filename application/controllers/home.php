@@ -51,7 +51,6 @@ class Home extends FrontController {
 			$this->ImUserMeta->insertSingleRow($user_id, 'photo', $user->imageUrl);
 			$this->ImUserMeta->insertSingleRow($user_id, 'is_new', 1);
 			$this->ImUserMeta->insertSingleRow($user_id, 'disclaimer_on', 1);
-			$this->session->set_userdata('im_uid', $user_id);
 		}
 
 		// Get all metadata
