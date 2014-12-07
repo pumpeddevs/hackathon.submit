@@ -19,4 +19,8 @@ class Game extends FrontController {
 				$this->ImUserMeta->updateIsNew($id)));
 		}
 	}
+
+	public function trial() {
+		
+	}
 }

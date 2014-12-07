@@ -57,4 +57,12 @@
 
 		console.log('timer starts now!');
 	}
+	
+	$('#run_codes').click(function(){
+		try{
+			eval(myCodeMirror.getValue());
+		} catch(err) {
+			alert(err);
+		}
+	});
 })();
