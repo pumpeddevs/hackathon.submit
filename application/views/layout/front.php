@@ -4,7 +4,7 @@
 	<title><?php echo $title; ?></title>
 	<!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url('css/vendor/meyers-reset.css'); ?>" /> -->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/vendor/bootstrap/bootstrap.min.css'); ?>" />
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/vendor/animate.min.css'); ?>" />
+	<!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url('css/vendor/animate.min.css'); ?>" /> -->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/vendor/codemirror/codemirror.css'); ?>" />
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/vendor/codemirror/monokai.css'); ?>" />
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/vendor/codemirror/lint.css'); ?>" />

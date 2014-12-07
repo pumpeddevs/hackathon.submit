@@ -30,7 +30,12 @@
 					<div class="stage">Stage 2</div>
 				</div>
 				<div class="col-xs-4">
-					<div class="stage pull-right">START</div>
+					<div class="stage pull-right">
+						<div class="pin">
+							<img src="<?php echo base_url('images/cat.jpg') ?>" alt="Cat">
+						</div>
+						<div class="pulse"></div>
+					</div>
 				</div>
 			</div>
 
