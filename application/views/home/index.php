@@ -13,9 +13,9 @@
 				<span>);</span>
 		</div>
 
-		<p id="congrats" class="h3 monokai-comm"></p>
+		<span id="congrats" class="h3 monokai-comm"></span>
 
-		<div id="login-wrapper" class"login" hidden>
+		<div id="login-wrapper" hidden>
 			<span class="h2 monokai-comm">Login with: </span>
 			<ul class="list-inline">
 				<li><a href="<?php echo base_url('home/login/?auth=Facebook') ?>" class="h2 monokai-comm">Facebook</a></li>
@@ -33,12 +33,12 @@
 
 			if (e.keyCode == 13) {
 				$congrats = $("#congrats");
-				$congrats.empty();
+				// $congrats.empty();
 
 				$congrats.typed({
 			    strings: [
 											'Hello ' + $('#name').val() + '! ^500 <br >You now know how to print logs in javascript! ^500 <br>' +
-											'// Want to learn more? <br> <span class="h2 monokai-comm">'
+											'// Want to learn more?'
 			    					],
 	        typeSpeed: 20,
 	        startDelay: 500,

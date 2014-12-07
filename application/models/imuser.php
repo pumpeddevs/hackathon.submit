@@ -17,8 +17,8 @@ class ImUser extends CI_Model{
 			 return $exists->id;
 		}
 
-		$sql = "INSERT INTO im_user (email, token) "
-				. "VALUES (?, ?)";
+		$sql = "INSERT INTO im_user (email, token)
+						VALUES (?, ?)";
 
 		$this->db->query($sql, array($user->email, $token));
 
@@ -34,9 +34,6 @@ class ImUser extends CI_Model{
 		return $res->row();
 	}
 
-	/**
-	 * NOT YET WORKING
-	 */
 	public function update($id, $user, $token) {
 		$sql = "UPDATE im_user SET email = ?, token = ? WHERE id = ?";
 

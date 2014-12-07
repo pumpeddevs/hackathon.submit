@@ -28,12 +28,26 @@ class Home extends FrontController {
 		$provider_name = $this->input->get('auth');
 		$session = $this->_session($provider_name);
 
-		$this->load->model('ImUser');
-		$response = $this->ImUser->store($session['user'],
-													$session['token']->accessToken);
+		// if auth fails, return to home page with some error
+		if (!$session) {
+			return false;
+		}
 
-		if ($response) {
-			$this->session->set_userdata('user', $response);
+		$user  = $session['user'];
+		$token = $session['token'];
+
+		$this->load->model('ImUser');
+		$this->load->model('ImUserMeta');
+
+		// add user if not exists else update user token 
+		$user_id = $this->ImUser->store($user, $token->accessToken);
+
+		if ($user_id) {
+
+			$this->ImUserMeta->insertSingleRow($user_id, 'name', $user->name);
+			$this->ImUserMeta->insertSingleRow($user_id, 'photo', $user->imageUrl);
+
+			$this->session->set_userdata('im_uid', $user_id);
 			redirect('game');
 		}
 	}
