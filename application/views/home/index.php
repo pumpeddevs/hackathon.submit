@@ -1,11 +1,10 @@
 <div class="home-container text-center">
 
 	<video loop="true" autoplay="true">
-		 <!-- <source type="video/mp4" src="<?php  echo base_url('css/video-bg.mp4') ?>"> -->
-		 <source type="video/mp4" src="css/video-bg.mp4">
-		 	Does not support?
+	 	<source type="video/webm" src="<?php  echo base_url('css/video-bg.webm') ?>"> 
+	 	<source type="video/mp4" src="<?php  echo base_url('css/video-bg.mp4') ?>"> 
 	</video>
-	
+
 	<?php echo $this->session->flashdata('failed_login'); ?>
 
 	<h1 class="tag-line monokai-key text-center">
