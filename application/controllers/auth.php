@@ -56,8 +56,9 @@ class Auth extends FrontController {
 			'scopes'       => array('email')
 		));
 
+		if($this->input->get('error')) die('Not authorized');
 
-		if ( ! $this->input->get('code')) {
+		if (!$this->input->get('code')) {
 
 		    // If we don't have an authorization code then get one
 		    redirect($provider->getAuthorizationUrl());
@@ -69,12 +70,6 @@ class Auth extends FrontController {
 		    $token = $provider->getAccessToken('authorization_code', [
 		        'code' => $this->input->get('code')
 		    ]);
-
-		    // If you are using Eventbrite you will need to add the grant_type parameter (see below)
-		    // $token = $provider->getAccessToken('authorization_code', [
-		    //     'code' => $this->input->get('code'),
-		    //     'grant_type' => 'authorization_code'
-		    // ]);
 
 		    // Optional: Now you have a token you can look up a users profile data
 		    try {
@@ -92,13 +87,20 @@ class Auth extends FrontController {
 		    }
 
 		    // Use this to interact with an API on the users behalf
-		    echo $token->accessToken;
+		    //echo $token->accessToken;
 
 		    // Use this to get a new access token if the old one expires
-		    echo $token->refreshToken;
+		    //echo $token->refreshToken;
 
 		    // Number of seconds until the access token will expire, and need refreshing
-		    echo $token->expires;
+		    //echo $token->expires;
+
+		    // Create session login
+		    $this->load->library('session');
+
+		    $this->session->set_userdata('token', $token);
+
+		    redirect(base_url('game/'));
 		}
 	}
 }
