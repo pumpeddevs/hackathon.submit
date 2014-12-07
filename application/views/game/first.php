@@ -14,8 +14,8 @@
 
 <script type="text/javascript">
 	var tut_page = 0,
-	steps = [welcomeUser, firstPage, secondPage, thirdPage, fourthPage, fifthPage, sixthPage],
-	ids   = ['welcome_content', 'tuts_basic1', 'tuts_basic2', 'tuts_basic3', 'tuts_basic4', 'tuts_basic5', 'tuts_basic6'],
+	steps = [welcomeUser, firstPage, secondPage, thirdPage, fourthPage, fifthPage, sixthPage, exitTuts],
+	ids   = ['welcome_content', 'tuts_basic1', 'tuts_basic2', 'tuts_basic3', 'tuts_basic4', 'tuts_basic5', 'tuts_basic6', 'exit_tuts'],
 	isClickable = false;
 
 	$(document).ready(function() {
@@ -38,7 +38,7 @@
 				return;
 			}
 
-			isClickable = false;
+			//isClickable = false;
 			tut_page++;
 			clearTuts(tut_page, tut_page-1);
 			steps[tut_page]();
@@ -83,7 +83,7 @@
 
 	function firstPage() {
 		var strings = [
-				'<h3>To learn programming, we must learn how to define programming. :) ^1000</h3>', 
+				'<h3>To learn programming, we must first learn how to define programming. :) ^1000</h3>', 
 				'<h1>Programming</h1> ^1000 <br/> <br/> <h4>It is a sequence of instructions that will automate ' +
 				'performing a specific task or solving a given problem.</h4> ^500 <br/> <br/> <h4> <strong>Computer programming</strong> ' +
 				'(often shortened to programming) is a process that leads from an original formulation of a computing ' +
@@ -107,31 +107,38 @@
 		var strings = [
 				'<h1>Run Button</h1> ^1000 <br/> <br/> <h4>The Run button executes all the codes written in your text editor.</h4>'
 			];
-		doTyped('#tuts_basic2', strings);
+		doTyped('#tuts_basic3', strings);
 	}
 
 	function fourthPage() {
 		var strings = [
 				'<h1>Stop Button</h1> ^1000 <br/> <br/> <h4>The Stop button stops code which you ran.</h4>'
 			];
-		doTyped('#tuts_basic2', strings);
+		doTyped('#tuts_basic4', strings);
 	}
 
 	function fifthPage() {
 		var strings = [
 				'<h1>History</h1> ^1000 <br/> <br/> <h4>The History pane will serve as your reference while blablabla</h4>'
 			];
-		doTyped('#tuts_basic2', strings);
+		doTyped('#tuts_basic5', strings);
 	}
 
 	function sixthPage() {
 		var strings = [
 				'<h1>Clear Button</h1> ^1000 <br/> <br/> <h4>The Clear button clears your text editor and puts them to your history for your reference.</h4>'
 			];
-		doTyped('#tuts_basic2', strings);
+		doTyped('#tuts_basic6', strings);
 	}
 
-	function doTyped(id, strings_used) {
+	function exitTuts() {
+		var strings = [
+				'<h1>Tutorial has finished. It\'s time to play the game now. :)</h1>'
+			];
+		doTyped('#tuts_basic6', strings, closeFirstTutorial);
+	}
+
+	function doTyped(id, strings_used, callback) {
 		$(id).show();
 		$(id).typed({
 			strings:strings_used,
@@ -140,8 +147,9 @@
 			callback:function() {
 				$(id).append('<br/><br/><div id="click_next" class="click-next" style="display:none;"><h5>(Click Next to continue)</h5></div>');
         		setTimeout(function(){
-        			$('#click_next').show();
+        			$('#click_next').css('display', 'inline');
 	        		$('#click_next').addClass('animated fadeInDown');
+	        		if(callback) callback();
 	        	}, 1000);
 				isClickable = true;
 			}
@@ -149,7 +157,10 @@
 	}
 
 	function closeFirstTutorial() {
-		$('#tutorial_holder').remove();
+		$('#tutorial_holder .tutorial-box').addClass('animated fadeOutLeft');
+		setTimeout(function() {
+			$('#tutorial_holder').remove();
+		}, 1000);
 	}
 
 </script>
