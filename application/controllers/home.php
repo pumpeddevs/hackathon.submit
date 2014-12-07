@@ -49,6 +49,7 @@ class Home extends FrontController {
 			$this->ImUserMeta->insertSingleRow($user_id, 'photo', $user->imageUrl);
 			$this->ImUserMeta->insertSingleRow($user_id, 'is_new', 1);
 			$this->session->set_userdata('im_uid', $user_id);
+			$this->session->set_userdata('name',$user->name);
 			redirect('game');
 		}
 	}
