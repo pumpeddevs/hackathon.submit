@@ -13,7 +13,7 @@ class Home extends FrontController {
 			)
 	);
 
-	public function __construct() 
+	public function __construct()
 	{
 		parent::__construct();
 		$this->title = 'Instruct Me';
@@ -39,7 +39,7 @@ class Home extends FrontController {
 		$this->load->model('ImUser');
 		$this->load->model('ImUserMeta');
 
-		// add user if not exists else update user token 
+		// add user if not exists else update user token
 		$user_id = $this->ImUser->store($user, $token->accessToken);
 
 		if ($user_id) {
@@ -91,7 +91,9 @@ class Home extends FrontController {
 		    } catch (Exception $e) {
 
 		        // Failed to get user details
-		        exit('Oh dear...');
+//		        exit('Oh dear...');
+				$this->session->set_flashdata('failed_login', 'Please try again');
+				redirect('home');
 		    }
 
 		    // Use this to interact with an API on the users behalf
