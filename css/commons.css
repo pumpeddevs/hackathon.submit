@@ -141,7 +141,7 @@ a.monokai-comm:hover {
 /* Tuts modal user *********/
 .tutorial-holder { width:100%; height:100%; background:rgba(255,255,255,0.6); position:absolute; z-index: 100; }
 .tutorial-holder .tutorial-box { width:80%; height:45%; background:#FFF; border:5px solid #04BF9D; position:relative; margin: 0 auto; top:30%; box-shadow:0 0 30px #DDD; font-family: "Helovetica", Arial, sans-serif; font-weight: 600; }
-.tutorial-holder .tutorial-box .tutorial-box-content { width:100%; height:80%; padding:45px 40px; background:#04BF9D; text-align: left; color:#FFF; }
+.tutorial-holder .tutorial-box .tutorial-box-content { width:100%; height:80%; padding:45px 40px; background:#04BF9D; text-align: left; color:#FFF; overflow: scroll; }
 .tutorial-holder .tutorial-box .tutorial-box-content h1,
 .tutorial-holder .tutorial-box .tutorial-box-content h2,
 .tutorial-holder .tutorial-box .tutorial-box-content h3,

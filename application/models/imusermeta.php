@@ -24,8 +24,8 @@ class ImUserMeta extends CI_Model {
 		if ($exists->num_rows() > 0) {
 
 			return $this->update(array(
-														'user_id' => $userid, 
-														'value'   => $metavalue, 
+														'user_id' => $userid,
+														'value'   => $metavalue,
 														'key'     => $metakey)
 													);
 		}
@@ -66,5 +66,20 @@ class ImUserMeta extends CI_Model {
 		$res = $this->db->query($sql, array($id));
 
 		return $res->result();
+	}
+
+	/**
+	 * Return true if affected row is more than 0
+	 * Update is_new to 0
+	 * @param int|string $id
+	 * @return boolean
+	 */
+	public function updateIsNew($id) {
+		$sql = 'UPDATE im_user_meta SET meta_value = ? WHERE user_id = ? '
+			. ' AND meta_key = ?';
+		$this->db->query($sql, array(0,$id,'is_new'));
+		if($this->db->affected_rows() >= 1)
+			return true;
+		return false;
 	}
 }
