@@ -94,6 +94,7 @@ class Home extends FrontController {
 		        // Failed to get user details
 				$this->session->set_flashdata('failed_login', 'Please try again');
 				redirect('home');
+				exit;
 		    }
 
 		    // Use this to interact with an API on the users behalf
