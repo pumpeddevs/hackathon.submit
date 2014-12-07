@@ -9,14 +9,6 @@ class ImUser extends CI_Model{
 
 	public function store($user, $token) 
 	{
-		$exists = $this->getUser($user->email);
-
-		if ($exists) {
-			 $this->update($exists->id, $user, $token);
-
-			 return $exists->id;
-		}
-
 		$sql = "INSERT INTO im_user (email, token)
 						VALUES (?, ?)";
 
