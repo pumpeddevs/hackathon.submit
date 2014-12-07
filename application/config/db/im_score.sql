@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 07, 2014 at 02:39 PM
+-- Generation Time: Dec 07, 2014 at 02:59 PM
 -- Server version: 5.5.40-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.5
 
@@ -32,15 +32,9 @@ CREATE TABLE IF NOT EXISTS `im_score` (
   `level_id` int(11) NOT NULL,
   `score` int(11) NOT NULL,
   `line_count` int(11) NOT NULL,
+  `date_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `im_score`
---
-
-INSERT INTO `im_score` (`id`, `user_id`, `level_id`, `score`, `line_count`) VALUES
-(1, 1, 1, 20, 10);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
