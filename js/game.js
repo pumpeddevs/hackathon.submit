@@ -121,9 +121,6 @@
 		console.log(timer.init());
 	}
 
-	log = function() {
-		alert('tesing');
-	};
     initAlert = function(interpreter, scope) {
 	  var wrapper;
       wrapper = function(text) {
