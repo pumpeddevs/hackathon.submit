@@ -1,6 +1,8 @@
 (function() {
+	var textarea = $('#text_editor'),
+		stagePicked = false;
 
-	var textarea = $('#text_editor');
+
 	var myCodeMirror = CodeMirror.fromTextArea(textarea.get(0), {
 		lineNumbers: true,
 		styleActiveLine: true,
@@ -107,6 +109,8 @@
 					}, 'json'
 				);
 			}
+		} else {
+
 		}
 
 		timerStart();
@@ -146,5 +150,13 @@
         myInterpreter.run();
       } finally {
       }
+	});
+
+	$('.stage').click(function(){
+		//disable doubleclick
+		if(!stagePicked) {
+			$(this).addClass('animated zoomOut');
+			stagePicked=true;
+		}
 	});
 })();
