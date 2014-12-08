@@ -99,7 +99,8 @@
 			<div class="stage-holder">
 				<a href="#">
 					<div class="stage">
-						<h1><?php echo $i; ?></h1>
+						<!--h1><?php echo $i; ?></h1-->
+						<img class="locked-stage" src="<?php echo base_url('images/lock.png'); ?>" alt="lock">
 					</div>
 					<div class="stage-name">
 						Divide and Conquer
