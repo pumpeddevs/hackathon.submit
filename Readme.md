@@ -10,6 +10,7 @@ We chose the theme "Introducing software development to a beginner (games!)" bec
 
 ==========
 The scope of the app is from really basic problems, to complex ones. Sample knowledge that will be developed by the users are:
+
 1. Logging
 2. Variables and data types
 3. Comments
