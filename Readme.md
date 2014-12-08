@@ -2,7 +2,7 @@
 
 ## Description
 
-[![Koding Hackathon](/images/badge.png?raw=true "Koding Hackathon")](https://koding.com/Hackathon)
+[![Koding Hackathon](http://roncabal.koding.io/images/badge.png "Koding Hackathon")](https://koding.com/Hackathon)
 
 **Instruct me** is (*supposed to be*) an application that teaches people how to develop their programming skills. It is a game based tutorial where users will have to answer different problems using javascript codes(We were thinking to make it flexible for all programming langauges but there is not much time).
 
