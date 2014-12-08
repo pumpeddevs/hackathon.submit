@@ -11,7 +11,7 @@
 <?php for($i=0;$i<20; $i++) : ?>
 	<div class="stage-holder">
 		<a href="#">
-			<div class="stage">
+			<div class="stage locked">
 				<!--h1><?php echo $i; ?></h1-->
 				<img class="locked-stage" src="<?php echo base_url('images/lock.png'); ?>" alt="lock">
 			</div>
