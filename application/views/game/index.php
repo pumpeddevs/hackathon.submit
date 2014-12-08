@@ -28,7 +28,7 @@
 			}
 		?>
 		<?php $this->load->view('template/navbar'); ?>
-		<div class="game-content-holder">
+		<!--div class="game-content-holder">
 			<div class="timer">
 				<span id="timer">00:00:00</span>
 			</div>
@@ -94,8 +94,24 @@
 
 			</div>
 		</div> <!-- // game-content-holder -->
+		<div class="game-content-holder">
+			<?php for($i=0;$i<20; $i++) : ?>
+			<div class="stage-holder">
+				<a href="#">
+					<div class="stage">
+						<!--h1><?php echo $i; ?></h1-->
+						<img class="locked-stage" src="<?php echo base_url('images/lock.png'); ?>" alt="lock">
+					</div>
+					<div class="stage-name">
+						Divide and Conquer
+					</div>
+				</a>
+			</div>
+		<?php endfor; ?>
+		</div><!-- // game-content-holder -->
 		<div class="console">
-
+			<div class="title"><p>Console</p></div>
+			<div id="console" class="console-output"></div>
 		</div>
 	</div>
 </div>
