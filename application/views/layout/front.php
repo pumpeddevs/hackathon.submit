@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/vendor/codemirror/codemirror.css'); ?>" />
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/vendor/codemirror/monokai.css'); ?>" />
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/vendor/codemirror/lint.css'); ?>" />
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/vendor/codemirror/show-hint.css'); ?>" />
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/commons.css'); ?>" />
 
   <script type="text/javascript" src="<?php echo base_url('js/vendor/jquery-1.11.1.min.js'); ?>"></script>
@@ -23,7 +24,8 @@
 	<script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/addon/lint/lint.js'); ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/addon/lint/coffeescript-lint.js'); ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/addon/lint/javascript-lint.js'); ?>"></script>
-	<script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/addon/showhint.js'); ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/addon/hint/show-hint.js'); ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/addon/hint/javascript-hint.js'); ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/javascript.js'); ?>"></script>
 	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 	<script src="<?php echo base_url('js/vendor/typed.js'); ?>"></script>
