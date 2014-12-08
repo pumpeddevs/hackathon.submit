@@ -17,10 +17,13 @@
 		</div>
 	</div>
 	<div class="game-holder pull-right">
-		<?php $this->load->view('game/tutorial'); ?>
+		<?php 
+			$session = $this->session->userdata('im_user')[1];
 
-		<?php
-		 	$session = $this->session->userdata('im_user')[1];
+			if (!isset($session['is_new'])
+						|| $session['is_new'] == 1) {
+				$this->load->view('game/tutorial');
+			}
 
 			if (!isset($session['disclaimer_on'])
 					|| $session['disclaimer_on'] == 1) {

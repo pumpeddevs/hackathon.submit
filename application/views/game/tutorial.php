@@ -5,7 +5,7 @@
 		</div>
 		<div class="im-modal-footer">
 			<div class="v-fix"></div>
-			<button id="skip" class="tuts-btn" onclick="closeFirstTutorial()">Skip</button>
+			<button id="skip" class="tuts-btn" onclick="closeFirstTutorial(1)">Skip</button>
 			<button id="prev" class="tuts-btn">&lt; Prev</button>
 			<button id="next" class="tuts-btn">Next &gt;</button>
 		</div>

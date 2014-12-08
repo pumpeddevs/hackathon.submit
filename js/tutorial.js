@@ -133,9 +133,27 @@ function doTyped(id, strings_used, callback) {
 	});
 }
 
-function closeFirstTutorial() {
+function closeFirstTutorial(skipped) {
 	$('#tutorial_holder .im-modal').addClass('animated fadeOutLeft');
+
+	if (skipped) {
+		
+		setTimeout(function() {
+			$('#tutorial_holder').remove();
+		}, 1000);
+
+		return;
+	}
+
 	setTimeout(function() {
-		$('#tutorial_holder').remove();
+		$.post(baseUrl + 'game/done_tutorial',
+			{
+				isNew: 0
+			},
+			function(data, textStatus, xhr) {
+					$('#tutorial_holder').remove();
+			}, 'json'
+		);
+		
 	}, 1000);
 }

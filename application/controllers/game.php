@@ -7,11 +7,13 @@ class Game extends FrontController {
 		$this->title = 'Instruct Me';
 	}
 
-	public function index() {
+	public function index()
+	{
 		$this->render('game/index');
 	}
 
-	public function updateisnew() {
+	public function updateisnew()
+	{
 		if($this->isAjax() && $this->session->userdata('im_user') !== false) {
 			$this->load->model('ImUserMeta');
 			$id = $this->session->userdata('im_user')[0]->id;
@@ -20,7 +22,8 @@ class Game extends FrontController {
 		}
 	}
 
-	public function update_disclaimer() {
+	public function update_disclaimer() 
+	{
 		if($this->isAjax() && $this->session->userdata('im_user')!== false) {
 			$this->load->model('ImUserMeta');
 
@@ -35,6 +38,29 @@ class Game extends FrontController {
 															array(
 																'user_id' => $id, 
 																'key'     => 'disclaimer_on',
+																'value'   => 0)
+															)
+							)
+					);
+		}
+	}
+
+	public function done_tutorial()
+	{
+		if($this->isAjax() && $this->session->userdata('im_user')!== false) {
+			$this->load->model('ImUserMeta');
+
+			$session = $this->session->userdata('im_user');
+			$session[1]['is_new'] = 0;
+
+			$this->session->set_userdata('im_user', array($session[0], $session[1]));
+			$id = $session[0]->id;
+			echo json_encode(
+							array(
+								'status'=> $this->ImUserMeta->update(
+															array(
+																'user_id' => $id, 
+																'key'     => 'is_new',
 																'value'   => 0)
 															)
 							)
