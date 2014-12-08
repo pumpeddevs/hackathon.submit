@@ -170,4 +170,8 @@
 			});
 		}
 	});
+
+	$('#clear-console').click(function(){
+		$('#console').html('');
+	});
 })();
