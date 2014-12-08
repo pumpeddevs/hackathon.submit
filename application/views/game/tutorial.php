@@ -1,4 +1,4 @@
-<!-- <div id="tutorial_holder" class="modal-wrapper" >
+<div id="tutorial_holder" class="modal-wrapper" >
 	<div class="im-modal">
 		<div class="im-modal-content">
 			<span id="welcome_content" class="welcome_tuts"></span>
@@ -10,6 +10,6 @@
 			<button id="next" class="tuts-btn">Next &gt;</button>
 		</div>
 	</div>
-</div> -->
+</div>
 
 <script type="text/javascript" src="<?php echo base_url('js/tutorial.js') ?>"></script>

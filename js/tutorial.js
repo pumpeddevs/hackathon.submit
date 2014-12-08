@@ -75,7 +75,7 @@ function firstPage() {
 function secondPage() {
 	var strings = [
 			'<h3>Let\'s get to know the app now. :) ^1000</h3>',
-			'<h1>Text Editor</h1> ^1000 <br/> <br/> <h4>The text editor is where all your codes should be written. The codes you write must be written</h4>'
+			'<h1>Text Editor</h1> ^1000 <br/> <br/> <h4>The text editor is where you write all your codes. Get familiar with your text editor as much as possible.</h4>'
 		];
 	doTyped('#tuts_basic2', strings);
 }
@@ -89,14 +89,14 @@ function thirdPage() {
 
 function fourthPage() {
 	var strings = [
-			'<h1>Stop Button</h1> ^1000 <br/> <br/> <h4>The Stop button stops code which you ran.</h4>'
+			'<h1>Stop Button</h1> ^1000 <br/> <br/> <h4>The Stop button stops the code execution if it is still running.</h4>'
 		];
 	doTyped('#tuts_basic4', strings);
 }
 
 function fifthPage() {
 	var strings = [
-			'<h1>History</h1> ^1000 <br/> <br/> <h4>The History pane will serve as your reference while blablabla</h4>'
+			'<h1>History</h1> ^1000 <br/> <br/> <h4>The History pane will store all the previous codes that you have cleared during the session.</h4>'
 		];
 	doTyped('#tuts_basic5', strings);
 }
@@ -112,7 +112,7 @@ function exitTuts() {
 	var strings = [
 			'<h1>Tutorial has finished. It\'s time to play the game now. :)</h1>'
 		];
-	doTyped('#tuts_basic6', strings, closeFirstTutorial);
+	doTyped('#exit_tuts', strings, closeFirstTutorial);
 }
 
 function doTyped(id, strings_used, callback) {
