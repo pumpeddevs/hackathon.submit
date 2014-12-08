@@ -18,8 +18,8 @@
 	</div>
 	<div class="game-holder pull-right">
 		<?php $this->load->view('game/tutorial'); ?>
-	
-		<?php 
+
+		<?php
 		 	$session = $this->session->userdata('im_user')[1];
 
 			if (!isset($session['disclaimer_on'])
@@ -32,8 +32,8 @@
 			<div class="timer">
 				<span id="timer">00:00:00</span>
 			</div>
-		
-			
+
+
 			<div id="stage-wrapper">
 				<div class="row rel">
 					<span class="dotted"></span>
@@ -78,7 +78,7 @@
 						<div class="stage pull-right">Stage 7</div>
 					</div>
 				</div>
-				
+
 				<div class="row rel">
 					<span class="dotted"></span>
 					<div class="col-xs-4">
@@ -94,11 +94,13 @@
 
 			</div>
 		</div> <!-- // game-content-holder -->
-		<div class="console">
+		<div id="console" class="console">
 
 		</div>
 	</div>
 </div>
 
 <script type="text/javascript" src="<?php echo base_url('js/vendor/jquery.timer.js') ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('js/vendor/acorn_interpreter.js'); ?>"></script>
+<script type="text/javascript" src="<?php // echo base_url('js/code.js') ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('js/game.js') ?>"></script>
