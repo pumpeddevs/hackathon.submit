@@ -36,4 +36,3 @@ We chose the name **"Instruct Me"** because that is basically what programmers d
 1. Facebook
 2. Google
 3. CodeMirror
-4. Acorn
