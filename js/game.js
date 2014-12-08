@@ -161,7 +161,7 @@
 			}, 500);
 
 			$.ajax({
-				url:'game/scene',
+				url:baseUrl+'game/scene',
 				success:function(data) {
 					setTimeout(function(){
 						$('#game-content').html(data);

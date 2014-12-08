@@ -43,6 +43,6 @@ class Game extends FrontController {
 	}
 
 	public function scene() {
-		$this->render('game/scene');
+		$this->renderPartial('game/scene');
 	}
 }
