@@ -133,7 +133,7 @@
       interpreter.setProperty(scope, 'alert',
           interpreter.createNativeFunction(wrapper));
 		log = function(text) {
-			$('#console').append('<p>' + text + '</p>');
+			$('#console').append('<div>' + text + '</div>');
 		};
 		wrapper = function(text) {
 			text = text ? text.toString() : '';
