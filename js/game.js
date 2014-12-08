@@ -6,7 +6,8 @@
 		styleActiveLine: true,
 		matchBrackets: true,
 		theme: 'monokai',
-		mode: "javascript",
+		extraKeys: {"Ctrl-Space": "autocomplete"},
+        mode: {name: "javascript", globalVars: true},
 		// gutters: ["CodeMirror-lint-markers"],
 		lint: true
 	});
