@@ -150,6 +150,7 @@
         myInterpreter.run();
       } catch(e) {
 //		  alert(e.toString());
+				$('#console').append('<p class="error">' + e + '</p>');
       }
 	});
 
