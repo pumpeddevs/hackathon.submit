@@ -9,8 +9,8 @@
 		matchBrackets: true,
 		theme: 'monokai',
 		extraKeys: {"Ctrl-Space": "autocomplete"},
-        mode: {name: "javascript", globalVars: true},
-		// gutters: ["CodeMirror-lint-markers"],
+    mode: {name: "javascript", globalVars: true},
+		gutters: ["CodeMirror-lint-markers"],
 		lint: true
 	});
 
@@ -149,6 +149,7 @@
       try {
         myInterpreter.run();
       } catch(e) {
+      	console.log(e);
 //		  alert(e.toString());
 				$('#console').append('<p class="error">' + e + '</p>');
       }
