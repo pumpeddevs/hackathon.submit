@@ -24,9 +24,13 @@
 	$('.stage').on('click', function(event) {
 		event.preventDefault();
 
+			$('.stage').removeClass('animated zoomOut');
+			$(this).addClass('animated zoomOut');
+
 		var disclaimer = $('#dis-wrapper');
 
 		if (!disclaimer.length) {
+
 			return timerStart();
 		}
 
@@ -92,6 +96,8 @@
 		var disOff = $('#disclaimer-off'),
 				disclaimer = $('#dis-wrapper');
 
+		// $('.stage').removeClass('zoomOut');
+
 		if (disclaimer) {
 			disclaimer.fadeOut('slow');
 
@@ -116,12 +122,27 @@
 
 	$('.dis-close').on('click', function(event) {
 		event.preventDefault();
+		$('.stage').removeClass('animated zoomOut');
+		// $('.stage.animated').removeClass('zoomOut').addClass('zoomIn');
 		$('#dis-wrapper').fadeOut('slow');
 	});
 
 	function timerStart() {
-		console.log(timer);
-		console.log(timer.init());
+
+		setTimeout(function(){
+			$('.stage-holder').addClass('animated fadeOut');
+		}, 500);
+
+		$.ajax({
+			url:baseUrl+'game/scene',
+			success:function(data) {
+				setTimeout(function(){
+					$('#game-content').html(data);
+
+					timer.init();
+				}, 1000);
+			}
+		});
 	}
 
     initAlert = function(interpreter, scope) {
@@ -153,27 +174,6 @@
 //		  alert(e.toString());
 				$('#console').append('<p class="error">' + e + '</p>');
       }
-	});
-
-	$('.stage').click(function(){
-		//disable doubleclick
-		if(!stagePicked) {
-			$(this).addClass('animated zoomOut');
-			stagePicked=true;
-
-			setTimeout(function(){
-				$('.stage-holder').addClass('animated fadeOut');
-			}, 500);
-
-			$.ajax({
-				url:baseUrl+'game/scene',
-				success:function(data) {
-					setTimeout(function(){
-						$('#game-content').html(data);
-					}, 1000);
-				}
-			});
-		}
 	});
 
 	$('#clear-console').click(function(){
