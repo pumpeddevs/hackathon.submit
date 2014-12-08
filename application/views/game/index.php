@@ -28,7 +28,7 @@
 			}
 		?>
 		<?php $this->load->view('template/navbar'); ?>
-		<!--div class="game-content-holder">
+		<!-- div class="game-content-holder">
 			<div class="timer">
 				<span id="timer">00:00:00</span>
 			</div>
@@ -93,7 +93,7 @@
 				</div>
 
 			</div>
-		</div> <!-- // game-content-holder -->
+		</div> <! // game-content-holder -->
 		<div id="game-content" class="game-content-holder">
 			<?php $this->load->view('game/stages'); ?>
 		</div><!-- // game-content-holder -->
