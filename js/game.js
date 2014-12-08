@@ -145,7 +145,8 @@
 		myInterpreter = new Interpreter(myCodeMirror.getValue(), initAlert);
       try {
         myInterpreter.run();
-      } finally {
+      } catch(e) {
+//		  alert(e.toString());
       }
 	});
 
