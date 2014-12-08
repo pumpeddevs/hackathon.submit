@@ -14,7 +14,7 @@
 	<script type="text/javascript" src="<?php echo base_url('js/vendor/bootstrap.min.js'); ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/codemirror.js'); ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/addon/comment/continuecomment.js'); ?>"></script>
-	<!-- <script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/addon/comment/comment.js'); ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/addon/comment/comment.js'); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/addon/matchbrackets.js'); ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/addon/active-line.js'); ?>"></script>
 	<script src="//ajax.aspnetcdn.com/ajax/jshint/r07/jshint.js"></script>
@@ -23,8 +23,9 @@
 	<script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/addon/lint/lint.js'); ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/addon/lint/coffeescript-lint.js'); ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/addon/lint/javascript-lint.js'); ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/addon/showhint.js'); ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/javascript.js'); ?>"></script>
-	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script> -->
+	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 	<script src="<?php echo base_url('js/vendor/typed.js'); ?>"></script>
 	<script>var baseUrl = "<?php echo base_url() ?>";</script>
 
