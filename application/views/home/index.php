@@ -8,7 +8,7 @@
 	<?php echo $this->session->flashdata('failed_login'); ?>
 
 	<h1 class="tag-line monokai-key text-center">
-		Our tagline here..
+		Instruct Me
 	</h1>
 
 	<div id="name-form" class="home-input white">
