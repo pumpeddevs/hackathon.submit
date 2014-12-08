@@ -8,7 +8,8 @@
 			<label for="disclaimer-off">
 				<input type="checkbox" id="disclaimer-off" value="1"> Do not show this again?
 			</label>
-			<p><a href="#" class="start-stage">I understand.</a></p>
+			<a href="#" class="start-stage">I understand.</a>
+			<p><a href="#" class="dis-close">Play later.</a></p>
 		</div>
 	</div>
 </div>

@@ -109,11 +109,14 @@
 					}, 'json'
 				);
 			}
-		} else {
-
 		}
 
 		timerStart();
+	});
+
+	$('.dis-close').on('click', function(event) {
+		event.preventDefault();
+		$('#dis-wrapper').fadeOut('slow');
 	});
 
 	function timerStart() {
@@ -122,23 +125,23 @@
 	}
 
     initAlert = function(interpreter, scope) {
-	  var wrapper;
+		var wrapper;
       wrapper = function(text) {
         text = text ? text.toString() : '';
         return interpreter.createPrimitive(alert(text));
       };
       interpreter.setProperty(scope, 'alert',
           interpreter.createNativeFunction(wrapper));
-	  log = function(text) {
-		  $('#console').append('<p>' + text + '</p>');
-	  };
-	  wrapper = function(text) {
-		 text = text ? text.toString() : '';
-		 return interpreter.createPrimitive(log(text));
-	  };
-	  interpreter.setProperty(scope,'log',
-	      interpreter.createNativeFunction(wrapper));
-    };
+		log = function(text) {
+			$('#console').append('<p>' + text + '</p>');
+		};
+		wrapper = function(text) {
+			text = text ? text.toString() : '';
+			return interpreter.createPrimitive(log(text));
+		};
+			interpreter.setProperty(scope,'log',
+			interpreter.createNativeFunction(wrapper));
+		};
 
 	$('#run_codes').click(function(){
 		var myInterpreter;
