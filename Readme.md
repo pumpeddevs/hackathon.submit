@@ -4,12 +4,12 @@
 
 [![Koding Hackathon](http://roncabal.koding.io/images/badge.png "Koding Hackathon")](https://koding.com/Hackathon)
 
-**Instruct me** is (*supposed to be*) an application that teaches people how to develop their programming skills. It is a game based tutorial where users will have to answer different problems using javascript codes(We were thinking to make it flexible for all programming langauges but there is not much time).
+**Instruct me** is (*supposed to be*) an application that will help people learn how to **develop** their programming skills. It is a **game based tutorial** where users will have to answer different problems using *javascript* codes(*We were thinking to make it flexible for all programming langauges but there is not much time*).
 
-We chose the theme "Introducing software development to a beginner (games!)" because we love to share what we know and we want to teach the world how to code. Our target for the application are mostly, children, that is why we chose to make a game tutorial. 
+We chose the theme **"Introducing software development to a beginner (games!)"** because we love to share what we know and we want to *teach the world how to code*. Our target for the application are mostly, children, that is why we chose to make a game tutorial. 
 
 ==========
-The scope of the app is from really basic problems, to complex ones. Sample knowledge that will be developed by the users are:
+The scope of the app is from really **basic problems**, to **complex** ones. Sample knowledge that will be developed by the users are:
 
 1. Logging
 2. Variables and data types
@@ -20,12 +20,11 @@ The scope of the app is from really basic problems, to complex ones. Sample know
 7. While Loop
 etc...
 
-The stages are continuous so that the program can be updated and we can add new stages for users to answer.
+The **stages** are continuous so that the program can be updated and we can add new stages for users to answer. The user can unlock a new stage after he/she finished the current stage.
 
-The scoring is based to the time rendered by the user, bugs encountered when running the codes, and the best way of writing the codes.
+The **scoring** is based to the *time rendered by the user*, *bugs encountered* when running the codes, and the *best way of writing the codes*.
 
-We chose the name "Instruct Me" because that is basically what programmers do when programming, instructing the computer what to do and what not to do.
-
+We chose the name **"Instruct Me"** because that is basically what programmers do when programming, instructing the computer what to do and what not to do.
 
 ## Screenshots
 
