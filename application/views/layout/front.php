@@ -11,7 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/vendor/codemirror/show-hint.css'); ?>" />
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/commons.css'); ?>" />
 
-  <script type="text/javascript" src="<?php echo base_url('js/vendor/jquery-1.11.1.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('js/vendor/jquery-1.11.1.min.js'); ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('js/vendor/bootstrap.min.js'); ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/codemirror.js'); ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('js/vendor/codemirror/addon/comment/continuecomment.js'); ?>"></script>
