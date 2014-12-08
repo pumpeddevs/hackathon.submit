@@ -20,4 +20,13 @@ class Stage extends CI_Model{
 
 		return $res->result();
 	}
+
+	public function getStage($id)
+	{
+		$sql = "SELECT * FROM im_stages WHERE id = ?";
+
+		$res = $this->db->query($sql, array($id));
+
+		return $res->row();
+	}
 }
