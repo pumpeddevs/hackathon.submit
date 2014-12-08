@@ -42,7 +42,7 @@ class Home extends FrontController {
 
 		$userdata = $this->ImUser->getUser($user->email);
 
-		if(empty($userdata)) {
+		if(!$userdata) {
 			// insert to database
 			$user_id = $this->ImUser->store($user, $token->accessToken);
 
@@ -51,10 +51,13 @@ class Home extends FrontController {
 			$this->ImUserMeta->insertSingleRow($user_id, 'photo', $user->imageUrl);
 			$this->ImUserMeta->insertSingleRow($user_id, 'is_new', 1);
 			$this->ImUserMeta->insertSingleRow($user_id, 'disclaimer_on', 1);
+			
+		} else {
+			$user_id = $userdata->id;
 		}
 
 		// Get all metadata
-		$meta = $this->ImUserMeta->getMeta($userdata->id);
+		$meta = $this->ImUserMeta->getMeta($user_id);
 
 		$usermeta = array();
 		foreach ($meta as $key => $value) {
