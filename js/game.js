@@ -58,7 +58,7 @@
 				timer.Timer = $.timer(me.updateTimer, incrementTime, true);
 			}
 		};
-		
+
 		this.resetStopwatch = function() {
 			me.currentTime = 0;
 			me.Timer.stop().once();
@@ -68,11 +68,11 @@
 	// Common functions
 	function pad(number, length) {
 		var str = '' + number;
-		
+
 		while (str.length < length) {
 			str = '0' + str;
 		}
-		
+
 		return str;
 	}
 	function formatTime(time) {
@@ -86,13 +86,13 @@
 
 	$('.start-stage').on('click', function(event) {
 		event.preventDefault();
-		
+
 		var disOff = $('#disclaimer-off'),
 				disclaimer = $('#dis-wrapper');
 
 		if (disclaimer) {
 			disclaimer.fadeOut('slow');
-			
+
 			if (disOff && disOff.is(':checked')) {
 
 				$.post(baseUrl + 'game/update_disclaimer',
@@ -117,11 +117,34 @@
 		console.log(timer.init());
 	}
 
+	log = function() {
+		alert('tesing');
+	};
+    initAlert = function(interpreter, scope) {
+	  var wrapper;
+      wrapper = function(text) {
+        text = text ? text.toString() : '';
+        return interpreter.createPrimitive(alert(text));
+      };
+      interpreter.setProperty(scope, 'alert',
+          interpreter.createNativeFunction(wrapper));
+	  log = function(text) {
+		  $('#console').append('<p>' + text + '</p>');
+	  };
+	  wrapper = function(text) {
+		 text = text ? text.toString() : '';
+		 return interpreter.createPrimitive(log(text));
+	  };
+	  interpreter.setProperty(scope,'log',
+	      interpreter.createNativeFunction(wrapper));
+    };
+
 	$('#run_codes').click(function(){
-		try{
-			eval(myCodeMirror.getValue());
-		} catch(err) {
-			alert(err);
-		}
+		var myInterpreter;
+		myInterpreter = new Interpreter(myCodeMirror.getValue(), initAlert);
+      try {
+        myInterpreter.run();
+      } finally {
+      }
 	});
 })();
