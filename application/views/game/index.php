@@ -106,5 +106,4 @@
 
 <script type="text/javascript" src="<?php echo base_url('js/vendor/jquery.timer.js') ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('js/vendor/acorn_interpreter.js'); ?>"></script>
-<script type="text/javascript" src="<?php // echo base_url('js/code.js') ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('js/game.js') ?>"></script>
