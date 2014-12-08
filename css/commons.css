@@ -4,6 +4,12 @@ body { overflow: hidden; }
 
 * { margin:0px; padding:0px; box-sizing:border-box; }
 
+a, 
+a:active,
+a:focus  {
+  outline:0; outline: none;
+}
+
 a:hover {
 	cursor: pointer;
 	text-decoration: none;
