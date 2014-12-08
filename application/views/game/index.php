@@ -98,7 +98,7 @@
 			<?php $this->load->view('game/stages'); ?>
 		</div><!-- // game-content-holder -->
 		<div class="console">
-			<div class="title"><p>Console</p></div>
+			<div class="title"><p>Console</p> <button id="clear-console">Clear Console</button></div>
 			<div id="console" class="console-output"></div>
 		</div>
 	</div>

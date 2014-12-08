@@ -150,8 +150,9 @@ a.monokai-comm:hover {
 
 .game-holder .console { width:100%; height:15%; background:#333; z-index: 1; }
 .game-holder .console .title { width:100%; height:25px; background:#232426; padding:5px 5px; }
-.game-holder .console .title p { color:#FFF; font-weight: 400; }
-.game-holder .console .console-output { width:100%; height:80%; height:-moz-calc(100% - 25px); height:-webkit-calc(100% - 25px); height:calc(100% - 25px); }
+.game-holder .console .title p { color:#FFF; font-weight: 400; display: inline; }
+.game-holder .console .title button { float:right;  height:25px; position: relative; margin-top: -5px; margin-right: -5px; }
+.game-holder .console .console-output { width:100%; height:80%; height:-moz-calc(100% - 25px); height:-webkit-calc(100% - 25px); height:calc(100% - 25px); color:#FFF; }
 
 /* Game Tutorials
 *********************/
