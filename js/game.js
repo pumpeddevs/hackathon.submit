@@ -134,6 +134,19 @@
 		if(!stagePicked) {
 			$(this).addClass('animated zoomOut');
 			stagePicked=true;
+
+			setTimeout(function(){
+				$('.stage-holder').addClass('animated fadeOut');
+			}, 500);
+
+			$.ajax({
+				url:'game/scene',
+				success:function(data) {
+					setTimeout(function(){
+						$('#game-content').html(data);
+					}, 1000);
+				}
+			});
 		}
 	});
 })();
