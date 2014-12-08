@@ -28,8 +28,8 @@ We chose the name "Instruct Me" because that is basically what programmers do wh
 
 ## Screenshots
 
-![Koding](https://koding.com/a/site.landing/images/slideshow/2x/ss-terminal.png "Koding")
-![Koding](https://koding.com/a/site.landing/images/slideshow/2x/ss-ide.png "Koding")
+![InstructMe](http://roncabal.koding.io/images/Screen%20Shot%202014-12-08%20at%202.44.08%20PM.png "InstructMe")
+![InstructMe](http://roncabal.koding.io/images/Screen%20Shot%202014-12-08%20at%202.43.56%20PM.png "InstructMe")
 
 ## APIs used
 
