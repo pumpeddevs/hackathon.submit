@@ -23,12 +23,15 @@
 		 	$session = $this->session->userdata('im_user')[1];
 
 			if (!isset($session['disclaimer_on'])
-					|| $session['disclaimer_on'] === 1) {
+					|| $session['disclaimer_on'] == 1) {
 				$this->load->view('game/disclaimer');
 			}
 		?>
 		<?php $this->load->view('template/navbar'); ?>
 		<div class="game-content-holder">
+			<div class="timer">
+				<span id="timer">00:00:00</span>
+			</div>
 		
 			<div class="row rel">
 				<span class="dotted"></span>
@@ -94,4 +97,5 @@
 	</div>
 </div>
 
+<script type="text/javascript" src="<?php echo base_url('js/vendor/jquery.timer.js') ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('js/game.js') ?>"></script>
